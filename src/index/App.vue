@@ -9,6 +9,11 @@
       </div>
       <div class="section">
         <Horizontal></Horizontal>
+        <!-- <div class="slide"> <Horizontal></Horizontal> </div>
+        <div class="slide"> 幻灯片 2 </div>
+        <div class="slide"> 幻灯片 3 </div>
+        <div class="slide"> 幻灯片 4 </div> -->
+        
       </div>
       <div class="section">
         <History></History>
@@ -51,7 +56,7 @@
 
 <style>
   .muchheight .fp-tableCell{
-    height:2920px !important
+    height:3370px !important
   }
 </style>
 
@@ -65,11 +70,14 @@
   .fade-leave-active {
     opacity: 0;
   }
+  .section{
+    height: 100vh !important;
+  }
   .muchheight{
-    height:2920px !important
+    height:3370px !important
   }
   .muchheight .fp-tableCell,.timeline,.vertical{
-    height:2920px !important
+    height:3370px !important
   }
   .timeline{
     background-color: #e9f0f5;
@@ -102,9 +110,11 @@
     data () {
       return {
         options: {
+          controlArrows: true,
+          verticalCentered: false,
           anchors: ['Vending', 'Opening', 'Horizontal', 'History', 'Store', 'Timeline', 'Story', 'Htmlfive', 'Vertical'],
           // sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6', '#ADD8E6', '#e9f0f5', '#ADD8E6', '#ADD8E6', '#ADD8E6'],
-          // autoScrolling: false,
+          autoScrolling: false,
           licensekey: 'OPEN-SOURCE-GPLV3-LICENSE'
           // scrollOverflow: true
         }

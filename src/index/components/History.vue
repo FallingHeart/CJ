@@ -1,16 +1,16 @@
 <template>
-<div style="position:relative">
-  <div
-    style="background-color: red;width:100%;height:100%;position:absolute"
-    data--540-top="height:0%;top:1080px"
-    data-bottom-top="height:100%;top:0px">
+<div style="position:relative;overflow:hidden;">
+  <div class="historyback"
+    data-center-top="top:0px"
+    data-bottom="top:1080px">
   </div>
   <img
     :src="historyBlock"
-    style="height:100%"
-    data-center-top="transform[bounce]:scale(1,1);height:100%;opacity:1"
-    data-top="transform[bounce]:scale(1.5,1.5);height:100%;opacity:0"
-    data--500-top="transform[bounce]:scale(1.5,1.5);height:5%;opacity:0">
+    style="height:100%;width:100%;top: 0;position: absolute;"
+    data-center-top="transform[bounce]:scale(1,1);opacity:1"
+    data-bottom="transform[bounce]:scale(1,1);opacity:1"
+    data--1080-top="transform[bounce]:scale(1.5,1.5);opacity:0"
+    >
 </div>
 </template>
 
@@ -20,7 +20,12 @@
 
 
 <style scoped>
-
+.historyback{
+  background-color: aquamarine;
+  width:100%;
+  height:1080px;
+  position:relative;
+}
 </style>
 
 <script>

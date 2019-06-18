@@ -1,19 +1,19 @@
 <template>
-<section>
+<div class="store">
 
 <!-- <img :src="store" alt="Ad" style="height:100%;margin: 0px 220px;"> -->
-<video autoplay="autoplay" :poster="store" style="height:100%;">
+<video autoplay="autoplay" :poster="store" style="height:100%;margin: 0px 220px;">
 	<!-- <source data-src="video/opening.mov" type="video/mp4" /> -->
 </video>
 
-</section>
+</div>
     
 </template>
 
 <style scoped>
-section{
-    height: 100vh;
-    background-color: darkseagreen;
+.store{
+  height: 100vh;
+  background-color: darkseagreen;
 }
 </style>
 

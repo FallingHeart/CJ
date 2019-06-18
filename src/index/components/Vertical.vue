@@ -10,11 +10,6 @@
     <img :src="historyBlock" alt="very cool bg">
     SOMETING
   </Parallax> -->
-  <!-- <div id="scene">
-    <div data-depth="0.2">My first Layer!</div>
-    <div data-depth="0.6">My second Layer!</div>
-  </div> -->
-  <!-- <div data-top="position:fix;top:100px;left:100px;" data-bottom="position:fix;top:200px;left:300px;" style="height:200px">WOOOT</div> -->
 </div>
 </template>
 
@@ -32,7 +27,6 @@
 
 <script>
   import Parallax from 'vue-parallaxy'
-  import ParallaxFLEX from 'parallax-js'
   import historyBlock from 'index/assets/images/history-block.png'
   export default {
     data () {
@@ -44,12 +38,7 @@
       Parallax
     },
     mounted () {
-      // var scene = document.getElementById('scene')
-      // var parallaxInstance = new ParallaxFLEX(scene, {
-      //   relativeInput: true
-      // })
-  
       var s = skrollr.init()
-  }
+    }
   }
 </script>

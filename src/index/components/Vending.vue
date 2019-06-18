@@ -13,6 +13,10 @@
                 <img class="output" src="#">
                 <img class="button" src="#" @click="toNext()">
             </div>
+            <div id="scene">
+                <div data-depth="0.2">My first Layer!</div>
+                <div data-depth="0.6">My second Layer!</div>
+            </div>
         </div>
     </div>
     
@@ -68,11 +72,20 @@
 </style>
 
 <script>
-export default {
-  methods: {
-    toNext () {
-      this.$parent.api.moveSectionDown()
+  import ParallaxFLEX from 'parallax-js'
+  export default {
+    methods: {
+      toNext () {
+        this.$parent.api.moveSectionDown()
+      }
+    },
+    mounted () {
+      var scene = document.getElementById('scene')
+      var parallaxInstance = new ParallaxFLEX(scene, {
+        relativeInput: true
+      })
+  
+      var s = skrollr.init()
     }
   }
-}
 </script>

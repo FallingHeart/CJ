@@ -1,5 +1,5 @@
 <template>
-<section id="cd-timeline" class="cd-container">
+<div id="cd-timeline" class="cd-container timeline">
     <div class="cd-timeline-block" v-for="(item, index) in list" :key="index">
       <div class="cd-timeline-img cd-picture cd-movie">
         <img src="assets/img/cd-icon-picture.svg" alt="Picture">
@@ -12,11 +12,13 @@
         <span class="cd-date">{{item.time}}</span>
       </div>
     </div>
-</section>
+</div>
 </template>
 
-<style>
-
+<style scoped>
+.timeline{
+  height: 3370px;
+}
 </style>
 
 
