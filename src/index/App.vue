@@ -38,7 +38,10 @@
         </div>
       </div>
       <div class="section">
-        End.
+        <div class="slide" data-anchor="slide1"> 幻灯片 1 </div>
+        <div class="slide" data-anchor="slide2"> 幻灯片 2 </div>
+        <div class="slide" data-anchor="slide3"> 幻灯片 3 </div>
+        <div class="slide" data-anchor="slide4"> 幻灯片 4 </div>
       </div>
     </full-page>
         <!-- <Vending></Vending>
@@ -115,8 +118,9 @@
           anchors: ['Vending', 'Opening', 'Horizontal', 'History', 'Store', 'Timeline', 'Story', 'Htmlfive', 'Vertical'],
           // sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6', '#ADD8E6', '#e9f0f5', '#ADD8E6', '#ADD8E6', '#ADD8E6'],
           autoScrolling: false,
-          licensekey: 'OPEN-SOURCE-GPLV3-LICENSE'
-          // scrollOverflow: true
+          licensekey: 'OPEN-SOURCE-GPLV3-LICENSE',
+          // scrollOverflow: true,
+          slidesNavigation: true
         }
       }
     }

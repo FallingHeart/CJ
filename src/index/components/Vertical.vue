@@ -1,6 +1,14 @@
 <template>
 <div>
-  <div data-top="background-color:rgb(0,0,255);" data-bottom="background-color:rgb(255,0,0);" style="height:200px">WOOOT</div>
+  <div
+    data-top="background-color:rgb(0,0,255);"
+    data-bottom="background-color:rgb(255,0,0);"
+    style="height:200px"
+    >    
+    <img :src="man" id="man" data-bottom-top="left:80%" data-100-bottom="left:0%">
+    <img :src="man" id="man" data-bottom-top="left:80%" data-100-bottom="left:0%">
+    <div>WOOOT</div>
+  </div>
   <!-- <Parallax
   :parallax="true"
   :fixed="false"
