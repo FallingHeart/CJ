@@ -1,82 +1,127 @@
 <template>
-    <div id="box">
-        <div id="machine" style="background:url('images/vending.png') no-repeat center;background-size:100% 100%">
-            <div id="window">
-                <img class="logo" src="#">
-                <img class="logo" src="#">
-                <img class="logo" src="#">
-                <img class="logo" src="#">
-                <img class="logo" src="#">
-                <img class="logo" src="#">
-            </div>
-            <div id="operate">                
-                <img class="output" src="#">
-                <img class="button" src="#" @click="toNext()">
-            </div>
-            <div id="scene">
-                <div data-depth="0.2">My first Layer!</div>
-                <div data-depth="0.6">My second Layer!</div>
-            </div>
-        </div>
-    </div>
-    
+  <div id="machine" style="background:url('images/vending.png') no-repeat center;background-size:100% 100%">
+    <img class="logo row1 col1" src="images/logo/京客隆logo.png" @click="lightbox('jkl')" alt="京客隆">
+    <img class="logo row1 col2" src="images/logo/丸町马神logo.png" @click="lightbox('wtms')" alt="丸町马神">
+    <img class="logo row1 col3" src="images/logo/711logo.png" @click="lightbox('se')" alt="711">
+    <img class="logo row2 col1" src="images/logo/罗森logo.png" @click="lightbox('ls')" alt="罗森超市发">
+    <img class="logo row2 col2" src="images/logo/尤拉logo.png" @click="lightbox('yl')" alt="尤拉超市">
+    <img class="logo row2 col3" src="images/logo/全家logo.png" @click="lightbox('qj')" alt="全家霞公府">
+    <!-- <img class="output" src="#"> -->
+    <img class="button" src="images/gotoContent.png" @click="gotoContent()">
+    <!-- <div id="scene">
+        <div data-depth="0.2">My first Layer!</div>
+        <div data-depth="0.6">My second Layer!</div>
+    </div> -->
+    <el-dialog :title="card.name" :visible.sync="dialogVisible" style="text-align:center;">
+      <img :src="card.img" :alt="card.des" style="height:100%;width: 100%;">
+    </el-dialog>
+  </div>    
 </template>
 
 <style scoped>
-
-#box{
-    background:#71ba2f;
-    height: 760px;    
-    padding: 160px 0;
+.el-dialog__body{
+  height: 100%;
 }
-
 #machine{
-    width: 70%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 100px 0 0 50px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
-
-#window{
-    width: 1085px;
-    height: 435px;
-    padding: 50px 0 0 68px;
-}
-
 .logo{
-    width: 275px;
-    height: 145px;
-    margin: 0 77px 76px 0;
+  width: 19%;
+  height: 19%;
+  position: absolute;
 }
-
-.logo:hover{
-    width: 325px;
-    height: 195px;
-    margin: -25px 52px 54px -25px;
+.row1{
+  top: 18%;
 }
-
-#operate{    
-    width: 1145px;
-    height: 105px;
-    margin: 67px 72px;
+.row2{
+  top:44%;
 }
-.output{
+.col1{
+  left: 10%;
+}
+.col2{
+  left: 34%;
+}
+.col3{
+  left:58%;
+}
+/* .output{
     width: 350px;
     height: 100px;
-}
+} */
 .button{
-    width: 310px;
-    height: 105px;
-    margin-left: 480px;
+  width: 22%;
+  height: 10%;
+  top: 75%;
+  right: 10%;
+  position: absolute;
 }
 </style>
 
 <script>
   import ParallaxFLEX from 'parallax-js'
   export default {
+    data () {
+      return {
+        dialogVisible: false,
+        card: {}
+      }
+    },
     methods: {
-      toNext () {
-        this.$parent.api.moveSectionDown()
+      gotoContent () {
+        this.$router.push('/Content')
+      },
+      lightbox (key) {
+        switch (key) {
+          case 'jkl':
+            this.card = {
+              name: '京客隆',
+              des: '本土零售商大佬在北京开启的第一家卖药品的便利店。',
+              img: 'images/logo/京客隆detail.png'
+            }
+            break
+          case 'wtms':
+            this.card = {
+              name: '丸町马神',
+              des: '一家隐藏在自动贩卖机后的网红酒吧。',
+              img: 'images/logo/丸町马神detail.png'
+            }
+            break
+          case 'se':
+            this.card = {
+              name: '711',
+              des: '全国销量前三的便利店，拥有自有品牌产品体系，同时还兜售药品。',
+              img: 'images/logo/711detail.png'
+            }
+            break
+          case 'ls':
+            this.card = {
+              name: '罗森超市发',
+              des: '京城最文艺便利店，买到甜品的同时可以坐下来看看书。',
+              img: 'images/logo/罗森detail.png'
+            }
+            break
+          case 'yl':
+            this.card = {
+              name: '尤拉超市',
+              des: '一家以俄罗斯商品为主的便利店，水果蔬菜日杂，一概都有。',
+              img: 'images/logo/尤拉detail.png'
+            }
+            break
+          case 'qj':
+            this.card = {
+              name: '全家霞公府',
+              des: '樱花主题，满满都是少女心的便利店，同时还卖樱花味的薯片。',
+              img: 'images/logo/全家detail.png'
+            }
+            break
+          default:
+            break
+        }
+        console.log(this.card)
+        this.dialogVisible = true
       }
     },
     mounted () {

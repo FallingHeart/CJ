@@ -11,6 +11,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
   entry: {
     app: path.resolve(__dirname, '../src/index/index.js'),
+    css: 'element-ui/lib/theme-chalk/index.css',
     style: path.resolve(__dirname, '../src/index/assets/style/style.css')
   },
   plugins: [
