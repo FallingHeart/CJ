@@ -61,6 +61,7 @@
 </style>
 
 <script>
+  import skrollr from '../../../static/js/skrollr.js'
   import ParallaxFLEX from 'parallax-js'
   export default {
     data () {

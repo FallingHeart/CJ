@@ -95,7 +95,7 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    
+
 <!-- :style="{top:index*10+'%',left:index*10+'%'}" -->
     <div class="section future">
       <div class="des des-future"
@@ -222,6 +222,7 @@ video{
 </style>
 
 <script>
+  import skrollr from '../../../static/js/skrollr.js'
   import Timeline from 'C/Timeline.vue'
   import History from 'C/History.vue'
   import Story from 'C/Story.vue'

@@ -29,6 +29,7 @@
 </style>
 
 <script>
+  import skrollr from '../../../static/js/skrollr.js'
   import storyBlock from 'index/assets/images/story-block.png'
   export default {
     data () {

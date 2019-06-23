@@ -29,6 +29,7 @@
 </style>
 
 <script>
+  import skrollr from '../../../static/js/skrollr.js'
   import historyBlock from 'index/assets/images/history-block.png'
   export default {
     data () {
