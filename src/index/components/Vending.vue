@@ -53,8 +53,8 @@
 } */
 .button{
   width: 22%;
-  height: 10%;
-  top: 75%;
+  height: 11%;
+  top: 77%;
   right: 10%;
   position: absolute;
 }

@@ -1,15 +1,15 @@
 <template>
 <div style="position:relative;overflow:hidden;">
   <div class="historyback"
-    data-center-top="top:0px"
-    data-bottom="top:1080px">
+    data-450p="top:0px"
+    data-550p="top:1080px">
   </div>
   <img
     :src="historyBlock"
     style="height:100%;width:100%;top: 0;position: absolute;"
-    data-center-top="transform[bounce]:scale(1,1);opacity:1"
-    data-bottom="transform[bounce]:scale(1,1);opacity:1"
-    data--1080-top="transform[bounce]:scale(1.5,1.5);opacity:0"
+    data-400p="transform[bounce]:scale(1,1);opacity:1"
+    data-500p="transform[bounce]:scale(1,1);opacity:1"
+    data-550p="transform[bounce]:scale(1.5,1.5);opacity:0"
     >
 </div>
 </template>
