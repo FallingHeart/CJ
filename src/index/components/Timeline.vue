@@ -1,7 +1,7 @@
 <template>
   <div id="cd-timeline" class="cd-container timeline">
       <div class="cd-timeline-block" v-for="(item, index) in list" :key="index">
-        <div class="cd-timeline-img cd-picture cd-movie">
+        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
           <img src="assets/img/cd-icon-picture.svg" alt="Picture">
         </div>
 
@@ -188,7 +188,7 @@ Modules - reusable parts of our design
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
-  max-width: 1170px;
+  /* max-width: 1170px; */
   margin: 0 auto;
 }
 .cd-container::after {
@@ -217,8 +217,8 @@ Main components
   top: 0;
   left: 18px;
   height: 100%;
-  width: 4px;
-  background: #d7e4ed;
+  width: 100px;
+  background: #fff;
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
@@ -227,7 +227,7 @@ Main components
   }
   #cd-timeline::before {
     left: 50%;
-    margin-left: -2px;
+    margin-left: -50px;
   }
 }
 
@@ -394,8 +394,8 @@ a.cd-read-more:hover{text-decoration:none; background-color: #424242;  }
     width: 100%;
     left: 122%;
     top: 6px;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 50px;
+    /* font-size: 1rem; */
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;

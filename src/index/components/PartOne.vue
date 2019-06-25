@@ -1,7 +1,6 @@
 <template>
 <div id="partone">
 
-        <!-- autoplay="autoplay" -->
         <!-- background:url(images/man.jpg);background-size:100% 100%;height: 100%;width:100% -->
     <div class="section opening" style="">
       <transition name="fade" mode="out-in">
@@ -37,7 +36,8 @@
     <div class="section intro">
       <div id="intro" style="height:100%;width:100%;">
         <video
-          controls="controls"          
+          controls="controls"
+          poster="images/thumbnail/intro.jpg"
           @ended="end">
           <source src="video/intro.mp4" type="video/mp4" />
         </video>
@@ -53,21 +53,42 @@
       </div>
 
     </div>
+        
+    <div class="section intro">
+      <div id="sequence" style="height:100%;width:100%;">
+        <video
+          controls="controls"
+          poster="images/thumbnail/scan.jpg"
+          >
+          <source src="video/scan.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
 
     <div class="section sequence">
-      <div class="des des-scan" data-300p="left:5%;top:5%;" data-400p="left:5%;top:-10%;">
+      <div class="des des-scan" data-400p="left:5%;top:5%;" data-500p="left:5%;top:-10%;">
         <p>晚班的顾客相对少，但也并不十分清闲。公司每天都会派人来送货，分两拨。</p>
         <p>第一拨速冻食品，一般凌晨一两点来，如果当天货品少，还可能到四点多；</p>
         <p>第二拨是常温货品，固定在四五点天将亮未亮之时抵达。</p>
       </div>
-      <div id="sequence" data-300p="left:50%;top:5%;" data-400p="left:50%;top:25%;" style="height:50%;width:50%;position:absolute;z-index:2;">
+      <div id="sequence" data-400p="left:50%;top:5%;" data-500p="left:50%;top:30%;" style="height:50%;width:50%;position:absolute;z-index:2;">
         <video
           controls="controls"
-          @ended="end">
+          >
           <source src="video/sequence.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
+
+    <div class="section sequence">
+      <div class="des des-pre" style="right:5%;top:0%;">
+        <p><span style="font-size:60px">物美便利店</span>在标准化便利店的经营模式的基础上，又很好地融入了北京本土小卖部和超市的传统。比如，物美便利店可以使用物美超市卡，这对老年人尤其有吸引力——刚从国瑞商场旁的物美便利店出来的刘女士今年72岁，拖着一辆布袋购物车，手上拿着物美超市卡：“我平时不怎么去便利店，一般去超市。它们（标准化便利店）那个什么手机支付我不会用，我一般就用卡和现金。”对他们来说，标准化的便利店仿佛是只有都市年轻人才会光顾的场所。但物美也在求新求变。</p>
+        <p>2017年4月,物美与新零售平台多点联合推出的“自由购”手机自助结帐全新的销售模式,只需用手机扫描商品码并线上支付,就可跳过收银台结账环节。</p>
+        <p>2018年12月11日，物美旗下多点便利店在其微信号上发出“安定门东大街有外卖！”的推送信息，宣布开通外卖业务，接入O2O模式。</p>
+        <p>2019年4月13日，物美便利店东花市店也上线了饿了么外卖平台。但王宁表示，目前还没有多少人发现物美已经在外卖平台上线，每天的线上接单量只有十来笔。</p>
+        <p>然而，整个便利店行业发展却在数年间有了质的飞跃。</p>
+      </div>
+    </div>    
 
     <div class="section history">
       <History></History>
@@ -85,12 +106,14 @@
       背影
     </div>
     
-    <div class="section slider">
+    <div class="section slider" style="background:url(images/slider.png)">
       <el-carousel :interval="5000" arrow="always">
         <el-carousel-item v-for="(slider,index) in sliderList" :key="index">
-          <el-row>
-            <el-col :span="12"><h2>便利情报站</h2><video src="#"></video></el-col>
-            <el-col :span="12"><h3>{{ slider.des }}</h3></el-col>
+          <el-row style="height:80%;margin-top: 15%;">
+            <el-col :span="10" :offset="1" style="margin-top: 10%;">
+              <video :poster="slider.poster" :src="slider.video"></video>
+            </el-col>
+            <el-col :span="10" :offset="2" v-html="slider.des" style="line-height:1.5;font-size: 35px;background-color:#fef4ca;padding:5%"></el-col>
           </el-row>
         </el-carousel-item>
       </el-carousel>
@@ -98,18 +121,95 @@
 
 <!-- :style="{top:index*10+'%',left:index*10+'%'}" -->
     <div class="section future">
-      <div class="des des-future"
+      <!-- <div class="des des-future"
       :data-1300p="fromData(index)"
       :data-1750p="toData(index)" 
       style="padding:5%;"
       v-for="(article,index) in difficulties"
       :key="index"
       v-html="article.content">
+      </div> -->
+      <div class="des" style="background:url('images/difficulty/1.png') no-repeat;width:50%;height:10%;left:7.5%;" data-1700p="top:2%" data-1750p="top:0%"></div>
+      <div class="des" style="background:url('images/difficulty/2.png') no-repeat;width:50%;height:15%;left:46.4%;" data-1750p="top:8%" data-1800p="top:2%"></div>
+      <div class="des" style="background:url('images/difficulty/3.png') no-repeat;width:50%;height:15%;left:7.5%;" data-1750p="top:15%" data-1850p="top:10%"></div>
+      <div class="des" style="background:url('images/difficulty/4.png') no-repeat;width:50%;height:15%;left:46.4%;" data-1800p="top:22%" data-1850p="top:15%"></div>
+      <div class="des" style="background:url('images/difficulty/5.png') no-repeat;width:50%;height:25%;left:7.5%;" data-1850p="top:25%" data-1950p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/6.png') no-repeat;width:50%;height:15%;left:46.4%;" data-1850p="top:45%" data-2000p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/7.jpg') no-repeat;width:50%;height:15%;left:7.5%;" data-1950p="top:45%" data-2050p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/8.jpg') no-repeat;width:50%;height:15%;left:46.4%;" data-1970p="top:48%" data-2050p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/9.jpg') no-repeat;width:50%;height:25%;left:7.5%;" data-2050p="top:50%" data-2150p="top:20%"></div>
+      <div id="intro" style="height:10%;width:100%;">
+        <img        
+          style="height:18%;width:100%;top: 60%;position: absolute;"
+          data-2080p="transform[bounce]:scale(1,1);opacity:0"
+          data-2120p="transform[bounce]:scale(1,1);opacity:1"
+          src="images/difficulty/view.png">
+      </div>
+    </div>
+<!-- background:url(images/opinion/man.jpg);background-size:100% 50%;height: 200%;width:100%; -->
+    <div class="section opinion" style="height: 200%;">
+      <transition name="fade" mode="out-in">
+      <div id="opinion" v-if="show2">
+        <video
+          controls="controls"
+          @ended="end2">
+          <source src="video/liu.mp4" type="video/mp4" />
+        </video>
+      </div>
+      </transition>
+      <div id="man" data-2230p="left:22%;top:0%;" data-2300p="left:5%;top:50%;">
+        <img src="images/opinion/talk.png">
+      </div>
+      <div class="des des-man" data-2230p="right:-50%;top:85%;height: 25%;" data-2300p="right:3%;top:50%;height: 25%;">
+        <el-carousel :interval="5000" arrow="always">
+        <el-carousel-item>
+          <b>大量品牌涌入，市场竞争惨烈</b>
+          <p>在几年前，北京便利店行业的市场竞争并没有如今这么激烈，整个北京内只有7-11和物美这两个品牌在市场中对峙。后来随着全家、便利蜂等各大品牌的涌入，便不可同日而语。直营便利店便利蜂以一个月开三十家甚至五十家的速度迅速扩张。开店具有明确的流程，在十五天到十七天内完成从选址到最后开业的全部过程。物美在二十一天就结束了，大家都在赶时间。</p>
+        </el-carousel-item>
+        <el-carousel-item>
+          <b>连锁店靠规模化取胜，盈利时间金钱成本双高</b>
+          <p>在北京市政府政策的支持下，除了物美、7-11等在北京有着稳固地位的便利店企业之外，还萌生出了很多新增的便利店品牌。由金融公司起家的“斑马惠购”就是一个例子。</p><p>新兴品牌的便利店都是资本投入，但由于资本逐利的特点，要求在一定时间内有一定的利润。便利店不可能在短时间内形成体系，也不可能形成利润。物美现在有400家店，但其中的将近250家都是亏损店。导致店铺亏损的因素有很多，比如房租、水电等等，和店铺的营业额没有太大的关系。</p><p>那么，在这种长期的巨额亏损的情况下，便利店到底什么时候才能盈利呢——连锁模式的便利店是靠规模取胜的。假如开50家的店的时候亏1个亿，开到100家的时候可能就亏了8000万，开200家的时候亏5000万，开到400家的时候就持平了，等到开到600家的时候，就赚钱了。因此，即使是7-11这种在全球著名的连锁便利店，在刚入驻北京的时候，也面临了同样的困境。</p>
+        </el-carousel-item>
+        <el-carousel-item>
+          <b>传统内资企业体系刻板，店铺升级效率低</b>
+          <p>便利店门店类型分为流动型、商务型、大厦型便利店。大厦类型的门店是除物美品牌以外不可能有的，因为物美是地方龙头、地方企业，受到地方保护。工行，农行这些银行的总部大厦里边都有物美的影子，连钓鱼台还有物美便利店的身影。</p><p>因为相关国家的政策，政府机构不能和日系企业合作。而物美正是靠着这些门店赚钱。这种企业一般只要物美销售额的3%当租金，其余的水电费、租金都不需要交。所以除了店员的工资，剩下的全是利润。而正是因为高昂的利润，物美才“不思进取”。</p><p>物美的店铺一直在升级，但“就是动作步子不跟迈那么大，因为怕劈了胯了”，由于内资企业传统而落后的体制，每项决策的实施都要经过很多层级，不容易进行彻底的颠覆。</p>
+        </el-carousel-item>
+      </el-carousel>
+      </div>
+    </div>
+
+    <div class="section intro" v-for="(img,index) in imgList" v-bind:key="index">
+      <img
+        :src="img.url"
+        style="height:100%;width:100%;top: 0;position: absolute;"
+        >
+    </div>
+    
+    <div class="section post">
+      <div class="des des-post" data-2930p="right:5%;top:50%;" data-3000p=right:5%;top:0%;>
+        <p><span style="font-size:60px">人来人去，车来车往。</span>在无数个十字路口、街道、商厦，一家家便利店在晨曦中迎来客人，在日暮里见证奋斗的身影。王宁走了，刘店长来了，在不断的交替更迭中，我们始终相信，便利店会越来越好.......</p>
+      </div>
+    </div>    
+
+    <div class="section end">
+      <div id="end" style="height:100%;width:100%;">
+        <video
+          controls="controls"          
+          >
+          <source src="video/end.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
 
 </div>
 </template>
+<style>
+
+  .el-carousel__container {
+    position: relative;
+    height: 100% !important;
+  }
+</style>
 
 <style scoped>
 
@@ -128,23 +228,11 @@
     line-height: 300px;
     margin: 0;
   }
-  
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
   .el-carousel--horizontal {
     overflow-x: hidden;
-    width: 60%;
-    height: 60%;
-    margin: 10% auto;
-  }
-  .el-carousel__container {
-    position: relative;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
 #partone{
   height: 100%;
@@ -154,7 +242,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: darkseagreen;
+  background-color: #eee;
   overflow: hidden;
 }
 video{
@@ -163,6 +251,13 @@ video{
 }
 #opening{
   height:100%;
+  width:100%;
+  position:absolute;
+  z-index:2;
+  /* opacity: 0; */
+}
+#opinion{  
+  height:50%;
   width:100%;
   position:absolute;
   z-index:2;
@@ -208,16 +303,35 @@ video{
   padding: 5%;
   font-size: 30px;
 }
+.des-pre{
+  width: 60%;
+  height: 70%;
+  margin: 5% 0;
+  padding: 5%;
+  font-size: 30px;
+}
 .des-future{
   width: 45%;
   height: 20%;
   font-size: 30px;
 }
+.des-post{
+  width: 60%;
+  height: 50%;
+  margin: 5% 0;
+  padding: 5%;
+  font-size: 30px;
+  line-height: 1.5;
+}
 .timeline{
-  height: 450%;
+  height: 650%;
 }
 .future{
-  height: 450%;
+  height: 600%;
+  margin-bottom: -75%;
+}
+.post{
+  height: 60%;
 }
 </style>
 
@@ -235,24 +349,27 @@ video{
     data () {
       return {
         show: true,
+        show2: true,
         sliderList: [
           {
-            des: '日本便利店：温度适宜，窗明几净。无论何时去便利店蹭杂志都不会尴尬，日本便利店是熟悉的驿站。站读文化”是日本便利店特有的一道风景线。'
+            des: '<p>日本便利店：温度适宜，窗明几净。无论何时去便利店蹭杂志都不会尴尬，日本便利店是熟悉的驿站。站读文化”是日本便利店特有的一道风景线。</p><p>不让客人等待，是日本便利店服务的一大原则。一旦客人排队，其他店员会立即跑到其他的收银台，一边向客人致歉，一边给客人结帐。是不是需要加热，是否需要筷子和勺子？”“饮料类是否需要吸管”？驿站服务，一站服务，无论何时何地，日本便利店都是行业的标杆。</p>',
+            video: 'video/slider/jp.mp4',
+            poster: 'images/slider/jp.jpg'
           },
           {
-            des: '不让客人等待，是日本便利店服务的一大原则。一旦客人排队，其他店员会立即跑到其他的收银台，一边向客人致歉，一边给客人结帐。是不是需要加热，是否需要筷子和勺子？”“饮料类是否需要吸管”？驿站服务，一站服务，无论何时何地，日本便利店都是行业的标杆。'
+            des: '<p>便利店最早起源于美国，但是在美国，由于面积大，人口少，所以便利店对于他们来说意义不大，因为人都居住得比较分散，所以大型的shopping mall才是美国特色，再加上由于竞争激烈，便利店盈利不大，导致便利店在美国普遍不多。通常美国人会把购物当作一种任务，每周会定期去大型超市去购买商品。</p>',
+            video: 'video/slider/us.mp4',
+            poster: 'images/slider/us.jpg'
           },
           {
-            des: '美国2:便利店最早起源于美国，但是在美国，由于面积大，人口少，所以便利店对于他们来说意义不大，因为人都居住得比较分散，所以大型的shopping mall才是美国特色，再加上由于竞争激烈，便利店盈利不大，导致便利店在美国普遍不多。通常美国人会把购物当作一种任务，每周会定期去大型超市去购买商品。'
+            des: '<p>美国加油站便利店：在美国，加油站等于服务站，由于政府法律规定营业场所及工作场所必须与个人居住地严格分开，生活居住区不准有商店营业，在中国随处可见的食杂店、便利店在美国的居住区中难觅其踪。所以，购物对美国人而言便成了一项专门任务，而非休闲活动。这时，上下班途中或生活区附近那些24小时营业的加油站里的便利店便填补了这个空缺。有些人去服务站并不是为了加油，而是为了到里面的便利店购物。</p>',
+            video: 'video/slider/oil.mp4',
+            poster: 'images/slider/oil.jpg'
           },
           {
-            des: '美国加油站便利店：在美国，加油站等于服务站，由于政府法律规定营业场所及工作场所必须与个人居住地严格分开，生活居住区不准有商店营业，在中国随处可见的食杂店、便利店在美国的居住区中难觅其踪。所以，购物对美国人而言便成了一项专门任务，而非休闲活动。这时，上下班途中或生活区附近那些24小时营业的加油站里的便利店便填补了这个空缺。有些人去服务站并不是为了加油，而是为了到里面的便利店购物。'
-          },
-          {
-            des: '韩国便利店：在韩国，和咖啡店一样随处可见的便是各式各样的便利店了。无论是上班族忙中得闲的美味午餐，还是观光客们填饱肚子的特色小食都可以在便利店中寻觅的到。便利店更是众多浪漫韩剧必备的拍摄地点，男女主人公在便利店门口的小桌上分享着一杯热乎乎的拉面看着都如此美好。“除了没有的都有了”，韩国人这么形容便利店。'
-          },
-          {
-            des: '除了销售食物、生活用品、换钱、购买电话卡、手机充电等基础服务外，便利店还提供单人家庭便民服务、定制型服务。韩国多家便利店品牌多推出了快递配送服务。顾客可凭条形码到便利店取货或由便利店职员送货上门。此外，韩国还出现了提供洗涤服务的便利店。'
+            des: '<p>韩国便利店：在韩国，和咖啡店一样随处可见的便是各式各样的便利店了。无论是上班族忙中得闲的美味午餐，还是观光客们填饱肚子的特色小食都可以在便利店中寻觅的到。便利店更是众多浪漫韩剧必备的拍摄地点，男女主人公在便利店门口的小桌上分享着一杯热乎乎的拉面看着都如此美好。“除了没有的都有了”，韩国人这么形容便利店。</p><p>除了销售食物、生活用品、换钱、购买电话卡、手机充电等基础服务外，便利店还提供单人家庭便民服务、定制型服务。韩国多家便利店品牌多推出了快递配送服务。顾客可凭条形码到便利店取货或由便利店职员送货上门。此外，韩国还出现了提供洗涤服务的便利店。</p>',
+            video: 'video/slider/kr.mp4',
+            poster: 'images/slider/kr.jpg'
           }
 
         ],
@@ -290,6 +407,14 @@ video{
           {
             content: '<p>人来人去，车来车往。在无数个十字路口、街道、商厦，一家家便利店在晨曦中迎来客人，在日暮里见证奋斗的身影。王宁走了，刘店长来了，在不断的交替更迭中，我们始终相信，便利店会越来越好.......</p>'
           }
+        ],
+        imgList: [
+          { url: 'images/opinion/开头.jpeg' },
+          { url: 'images/opinion/1.png' },
+          { url: 'images/opinion/2.png' },
+          { url: 'images/opinion/3.png' },
+          { url: 'images/opinion/4.png' },
+          { url: 'images/opinion/结尾.jpeg' }
         ]
       }
     },
@@ -310,6 +435,9 @@ video{
     methods: {
       end () {
         this.show = !this.show
+      },
+      end2 () {
+        this.show2 = !this.show2
       },
       fromData (index) {
         return 'color:rgb(' + 255 * Math.random() + ',' + 255 + ',' + 255 + ');' +

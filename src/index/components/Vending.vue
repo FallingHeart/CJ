@@ -18,10 +18,16 @@
   </div>    
 </template>
 
-<style scoped>
-.el-dialog__body{
-  height: 100%;
+<style>
+.el-dialog__wrapper .el-dialog .el-dialog__header{
+  display: none;
 }
+.el-dialog__wrapper .el-dialog .el-dialog__body{
+  height: 100%;
+  padding: 0;
+}
+</style>
+<style scoped>
 #machine{
   width: 100%;
   height: 100%;
