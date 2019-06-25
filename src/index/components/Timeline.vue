@@ -1,5 +1,5 @@
 <template>
-  <div id="cd-timeline" class="cd-container timeline">
+  <div id="cd-timeline" class="cd-container" style="background: url('images/bg/his.png');">
       <div class="cd-timeline-block" v-for="(item, index) in list" :key="index">
         <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
           <img src="assets/img/cd-icon-picture.svg" alt="Picture">
@@ -9,17 +9,42 @@
           <!-- <h2>{{item.place}}</h2>
           <p>{{item.event}}</p>
           <a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a> -->
-          <span class="cd-date">{{item.time}}年</span>
-          <img :src="'images/timeline/'+item.time+'.png'" alt="">
+          <span class="cd-date">{{item.time}}</span>
+          <img :src="'images/timeline/'+item.img+'.png'" alt="">
+        </div>
+      </div>
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
+          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
+        </div>
+
+        <div class="cd-timeline-content">
+          <h2>全球第一支便利店广告</h2>
+          <!-- <p>{{item.event}}</p>
+          <a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a> -->
+          <span class="cd-date"></span>
+          <video
+            controls="controls"
+            >
+            <source src="video/first.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
+          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
+        </div>
+
+        <div class="cd-timeline-content">
+          <img :src="'images/timeline/tobe.png'" alt="">
         </div>
       </div>
   </div>
 </template>
 
 <style scoped>
-.timeline{
-  height: 3370px;
-}
+
 </style>
 
 
@@ -29,59 +54,70 @@ export default {
     return {
       list: [
         {
-          time: '1927',
+          time: '1927年',
           place: '美国德克萨斯州',
-          event: '南方公司首创便利店原型'
+          event: '南方公司首创便利店原型',
+          img: '1927'
         },
         {
-          time: '1946',
+          time: '1946年',
           place: '',
-          event: '世界上第一家真正意义上的便利店 “7-Eleven”诞生'
+          event: '世界上第一家真正意义上的便利店 “7-Eleven”诞生',
+          img: '1946'
         },
         {
-          time: '1992',
+          time: '1992年',
           place: '深圳',
-          event: '7-Eleven开出五家门店，成为首个进入中国市场的外资便利店品牌'
+          event: '7-Eleven开出五家门店，成为首个进入中国市场的外资便利店品牌',
+          img: '1992'
         },
         {
-          time: '1995',
+          time: '1995年',
           place: '上海',
-          event: '第一家国营便利店可的在'
+          event: '第一家国营便利店可的在',
+          img: '1995'
         },
         {
-          time: '1999',
+          time: '1999年',
           place: '北京',
-          event: '物美成为北京第一个本土便利店品牌'
+          event: '物美成为北京第一个本土便利店品牌',
+          img: '1999'
         },
         {
-          time: '2001',
+          time: '2001年',
           place: '北京',
-          event: '第一家外资便利店由倍顺好邻居在中轴路开出'
+          event: '第一家外资便利店由倍顺好邻居在中轴路开出',
+          img: '2001'
         },
         {
-          time: '2002',
+          time: '2002年',
           place: '北京',
-          event: '全北京有 200 家 24 小时便利店，包括好邻居、物美、超市发、金象大药房、佐川急便等。'
+          event: '全北京有 200 家 24 小时便利店，包括好邻居、物美、超市发、金象大药房、佐川急便等。',
+          img: '2002'
         },
         {
-          time: '2003',
+          time: '2003年',
           place: '北京',
-          event: 'SARS（非典）席卷中国大地，便利店作为居民购买生活必需品和防疫消毒用品的主要渠道，迎来了新的发展机遇。'
+          event: 'SARS（非典）席卷中国大地，便利店作为居民购买生活必需品和防疫消毒用品的主要渠道，迎来了新的发展机遇。',
+          img: '2003'
         },
         {
-          time: '2004',
+          time: '2004年',
           place: '北京',
-          event: '7-ELEVEn在东直门开设了第一家门店，从此“零售+速食”模式成为北京便利店风靡一时的经营妙方。'
+          event: '7-ELEVEn在东直门开设了第一家门店，从此“零售+速食”模式成为北京便利店风靡一时的经营妙方。',
+          img: '2004'
         },
         {
-          time: '2017.2',
+          time: '2017年2月',
           place: '北京',
-          event: '互联网、北京奥运会以及电商网站的快速发展让北京便利店进入了新的发展阶段，以O2O拓展线上业务。'
+          event: '互联网、北京奥运会以及电商网站的快速发展让北京便利店进入了新的发展阶段，以O2O拓展线上业务。',
+          img: '2017.2'
         },
         {
-          time: '2017.6',
+          time: '2017年6月',
           place: '北京',
-          event: '便利店又出现“生鲜+零售”的标配模式，东直门的7-Eleven也开始了卖菜生涯'
+          event: '便利店又出现“生鲜+零售”的标配模式，东直门的7-Eleven也开始了卖菜生涯',
+          img: '2017.6'
         }
       ]
     }

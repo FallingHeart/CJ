@@ -25,10 +25,15 @@ const router = new VueRouter({
   // https://router.vuejs.org/zh/guide/essentials/history-mode.html
   mode: process.env.NODE_ENV === 'production' ? 'history' : '',
   scrollBehavior (to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { x: 0, y: 0 }
+    // if (savedPosition) {
+    //   return savedPosition
+    // } else {
+    //   return { x: 0, y: 0 }
+    // }
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
     }
   }
 })

@@ -1,15 +1,15 @@
 <template>
 <div style="position:relative;overflow:hidden;background-color:#67DDE0">
   <div class="storyback"
-    data-1400p="top:0px"
-    data-1500p="top:1080px">
+    data-1450p="top:0px"
+    data-1550p="top:1080px">
   </div>
   <img
     :src="storyBlock"
     style="height:100%;width:100%;top: 0;position: absolute;"
-    data-1350p="transform[bounce]:scale(1,1);opacity:1"
-    data-1450p="transform[bounce]:scale(1,1);opacity:1"
-    data-1500p="transform[bounce]:scale(1.5,1.5);opacity:0"
+    data-1400p="transform[bounce]:scale(1,1);opacity:1"
+    data-1500p="transform[bounce]:scale(1,1);opacity:1"
+    data-1550p="transform[bounce]:scale(1.5,1.5);opacity:0"
     >
 </div>
 </template>

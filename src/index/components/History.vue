@@ -1,5 +1,5 @@
 <template>
-<div style="position:relative;overflow:hidden;background-color:#F6DC65">
+<div style="position:relative;overflow:hidden;background-color:#F6DC65;">
   <div class="historyback"
     data-650p="top:0px"
     data-750p="top:1080px">

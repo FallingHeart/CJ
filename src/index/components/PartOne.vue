@@ -2,7 +2,36 @@
 <div id="partone">
 
         <!-- background:url(images/man.jpg);background-size:100% 100%;height: 100%;width:100% -->
-    <div class="section opening" style="">
+    <div class="section opening" style="background:url(images/bg/first.png);background-size:100% 100%;height: 100%;width:100%">
+      <div style="position:fixed;z-index:999;background-color:#65625aad;" v-bind:class="{ fullheight: isActive }">
+        <el-menu
+          ref="nav"
+          default-active="#jishi"
+          @open="handleOpen"
+          @close="handleClose"
+          :collapse="isCollapse"
+          :router="true"
+          background-color='#ffffff00'
+          text-color='#ffffff'>
+          <el-submenu index="1" style="">
+            <template slot="title">
+              <i class="el-icon-s-operation" style="color:#000;font-size: 30px;"></i>
+            </template>
+              <el-menu-item style="text-align:right;border-bottom: 2px solid;" index="#jishi">纪事</el-menu-item>
+              <el-menu-item style="text-align:right;border-bottom: 2px solid;" index="#fazhan">发展</el-menu-item>
+              <el-menu-item style="text-align:right;border-bottom: 2px solid;" index="#renqing">人情</el-menu-item>
+              <el-menu-item style="text-align:right;border-bottom: 2px solid;" index="#kunjing">困境</el-menu-item>
+              <el-menu-item style="text-align:right;border-bottom: 2px solid;" index="#weilai">未来</el-menu-item>
+          </el-submenu>
+        </el-menu>
+        <!-- <router-link to="#jishi">纪事</router-link>
+        <router-link to="#fazhan">发展</router-link>
+        <router-link to="#renqing">人情</router-link>
+        <router-link to="#kunjing">困境</router-link>
+        <router-link to="#weilai">未来</router-link> -->
+      </div>
+
+      <a id="jishi"></a>
       <transition name="fade" mode="out-in">
       <div id="opening" v-if="show">
         <video
@@ -23,13 +52,13 @@
       </div>
     </div>
 
-    <div class="section store">
+    <div class="section store" style="background:url(images/bg/store.png);background-size:100% 100%;height: 100%;width:100%">
       <div id="store" data-0="right:50%;top:0%;" data-100p="right:0%;top:0%;">
         <img src="images/opening/store.png">
       </div>
       <div class="des des-store" data-0="right:80%;" data-100p="right:45%;">
-        <p>这是王宁在北京东花市物美便利店工作的第二年。这位有些高大的年轻人微胖身材，皮肤白皙，一头棕色短发，刘海微微扎眼。2017年10月，他从老家河南来到北京，先在餐饮行业管了几个月库房，然后在18年经朋友介绍加入物美，“这里待遇更好一点，现在每个月八九千吧。”</p>
-        <p>王宁现在是物美便利店东花市店的店长。这家店正处在东花市大街与东花市东街交叉路口的西南角，四周全是居民区，经营状况良好，每天的营业额大概可以达到五千元。物美便利店由北京物美商业集团股份有限公司直营，租金、货源都由公司统一管理，店铺利润也都归公司所有，到月底再进行店铺开销和人员工资的清算。</p>
+        <p>这是王宁在北京东花市物美便利店工作的第二年。2017年10月，他从老家河南来到北京，先在餐饮行业管了几个月库房，然后在18年经朋友介绍加入物美，“这里待遇更好一点，现在每个月八九千吧。”</p>
+        <p>王宁现在是物美便利店东花市店的店长。这家店正处在东花市大街与东花市东街交叉路口的西南角，每天的营业额大概可以达到五千元。物美便利店由北京物美商业集团股份有限公司直营，租金、货源都由公司统一管理，店铺利润也都归公司所有，到月底再进行清算。</p>
       </div>
     </div>
     
@@ -44,7 +73,7 @@
       </div>
     </div>
 
-    <div class="section intro">
+    <div class="section intro" style="background:url(images/bg/store.png);background-size:100% 100%;height: 100%;width:100%">
       <div id="scan" data-200p="right:0%;top:0%;" data-300p="right:50%;top:0%;">
         <img src="images/opening/scan.png">
       </div>
@@ -65,7 +94,7 @@
       </div>
     </div>
 
-    <div class="section sequence">
+    <div class="section sequence" style="background:url(images/bg/store.png);background-size:100% 100%;height: 100%;width:100%">
       <div class="des des-scan" data-400p="left:5%;top:5%;" data-500p="left:5%;top:-10%;">
         <p>晚班的顾客相对少，但也并不十分清闲。公司每天都会派人来送货，分两拨。</p>
         <p>第一拨速冻食品，一般凌晨一两点来，如果当天货品少，还可能到四点多；</p>
@@ -80,17 +109,19 @@
       </div>
     </div>
 
-    <div class="section sequence">
+    <div class="section sequence" style="background:url(images/bg/wumei.png);background-size:100% 100%;height: 100%;width:100%">
       <div class="des des-pre" style="right:5%;top:0%;">
-        <p><span style="font-size:60px">物美便利店</span>在标准化便利店的经营模式的基础上，又很好地融入了北京本土小卖部和超市的传统。比如，物美便利店可以使用物美超市卡，这对老年人尤其有吸引力——刚从国瑞商场旁的物美便利店出来的刘女士今年72岁，拖着一辆布袋购物车，手上拿着物美超市卡：“我平时不怎么去便利店，一般去超市。它们（标准化便利店）那个什么手机支付我不会用，我一般就用卡和现金。”对他们来说，标准化的便利店仿佛是只有都市年轻人才会光顾的场所。但物美也在求新求变。</p>
-        <p>2017年4月,物美与新零售平台多点联合推出的“自由购”手机自助结帐全新的销售模式,只需用手机扫描商品码并线上支付,就可跳过收银台结账环节。</p>
-        <p>2018年12月11日，物美旗下多点便利店在其微信号上发出“安定门东大街有外卖！”的推送信息，宣布开通外卖业务，接入O2O模式。</p>
-        <p>2019年4月13日，物美便利店东花市店也上线了饿了么外卖平台。但王宁表示，目前还没有多少人发现物美已经在外卖平台上线，每天的线上接单量只有十来笔。</p>
+        <p><span style="font-size:60px">物美便利店</span>在标准化便利店的经营模式的基础上，又很好地融入了北京本土小卖部和超市的传统：物美便利店可以使用物美超市卡，这对老年人尤其有吸引力——刚从国瑞商场旁的物美便利店出来的刘女士今年72岁，拖着一辆布袋购物车，手上拿着物美超市卡：“它们（标准化便利店）那个什么手机支付我不会用，我一般就用卡和现金。”对他们来说，标准化的便利店仿佛是只有都市年轻人才会光顾的场所。</p>
+        <p>但物美也在求新求变。</p>
+        <p>2017年4月,物美与新零售平台多点联合推出的“自由购”手机自助结帐,只需扫描商品码并线上支付,就可跳过收银台结账环节。</p>
+        <p>2018年12月11日，物美旗下多点便利店宣布开通外卖业务，接入O2O模式。</p>
+        <p>2019年4月13日，物美便利店东花市店上线了饿么外卖平台。但王宁表示，目前还没有多少人发现物美已经在外卖平台上线，每天的线上接单量只有十来笔。</p>
         <p>然而，整个便利店行业发展却在数年间有了质的飞跃。</p>
       </div>
     </div>    
 
     <div class="section history">
+      <a id="fazhan"></a>
       <History></History>
     </div>
     
@@ -99,11 +130,111 @@
     </div>
 
     <div class="section story">
+      <a id="renqing"></a>
       <Story></Story>
     </div>
     
-    <div class="section story">
-      背影
+    <div class="section talk" style="background:url(images/bg/talk.png);">
+      <div><img src="images/talk/1.png" alt=""
+        data-1500p="left:100%;top:2%;"
+        data-1600p="left:68.2%;top:3%;"
+        data-1780p="left:68.2%;top:66%;"
+        style="position:absolute">
+      </div>
+      <div><img src="images/talk/2.png" alt=""
+        data-1500p="left:100%;top:2%;"
+        data-1600p="left:52.3%;top:3%;"
+        data-1780p="left:52.3%;top:66%;"
+        style="position:absolute">
+      </div>
+      <div><img src="images/talk/3.png" alt=""
+        data-1500p="right:100%;top:2%;"
+        data-1600p="right:70%;top:3%;"
+        data-1780p="right:70%;top:66%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/4.png" alt=""
+        data-1540p="left:100%;top:2%;"
+        data-1560p="left:60%;top:3%;"
+        style="position:absolute">
+      </div>
+      <div><img src="images/talk/5.png" alt=""
+        data-1540p="right:100%;top:2%;"
+        data-1560p="right:60%;top:6%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/6.png" alt=""
+        data-1560p="left:100%;top:2%;"
+        data-1580p="left:60%;top:9%;"
+        style="position:absolute">
+      </div>
+      <div><img src="images/talk/7.png" alt=""
+        data-1560p="right:100%;top:2%;"
+        data-1580p="right:60%;top:12%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/8.png" alt=""
+        data-1580p="left:100%;top:2%;"
+        data-1600p="left:60%;top:15%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/9.png" alt=""
+        data-1640p="right:100%;top:2%;"
+        data-1660p="right:60%;top:36%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/10.png" alt=""
+        data-1640p="left:100%;top:2%;"
+        data-1660p="left:60%;top:39%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/11.png" alt=""
+        data-1660p="right:100%;top:2%;"
+        data-1680p="right:60%;top:42%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/12.png" alt=""
+        data-1660p="left:100%;top:2%;"
+        data-1680p="left:60%;top:45%;"
+        style="position:absolute">
+      </div>
+      
+      <div><img src="images/talk/13.png" alt=""
+        data-1720p="left:50%;top:2%;margin-left:-1px;width:2px;"
+        data-1740p="left:50%;top:51%;;margin-left:-244px;width:488px;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/14.png" alt=""
+        data-1740p="left:100%;top:2%;"
+        data-1760p="left:60%;top:72%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/15.png" alt=""
+        data-1740p="right:100%;top:2%;"
+        data-1760p="right:60%;top:75%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/17.png" alt=""
+        data-1760p="left:100%;top:2%;"
+        data-1780p="left:60%;top:84%;"
+        style="position:absolute">
+      </div>
+
+      <div><img src="images/talk/16.png" alt=""
+        data-1760p="right:100%;top:2%;"
+        data-1780p="right:60%;top:81%;"
+        style="position:absolute">
+      </div>
     </div>
     
     <div class="section slider" style="background:url(images/slider.png)">
@@ -111,16 +242,17 @@
         <el-carousel-item v-for="(slider,index) in sliderList" :key="index">
           <el-row style="height:80%;margin-top: 15%;">
             <el-col :span="10" :offset="1" style="margin-top: 10%;">
-              <video :poster="slider.poster" :src="slider.video"></video>
+              <video :poster="slider.poster" :src="slider.video" controls="controls"></video>
             </el-col>
-            <el-col :span="10" :offset="2" v-html="slider.des" style="line-height:1.5;font-size: 35px;background-color:#fef4ca;padding:5%"></el-col>
+            <el-col :span="10" :offset="2" v-html="slider.des" style="line-height:1.5;font-size: 28px;background-color:#fef4ca;padding:5%"></el-col>
           </el-row>
         </el-carousel-item>
       </el-carousel>
     </div>
 
 <!-- :style="{top:index*10+'%',left:index*10+'%'}" -->
-    <div class="section future">
+    <div class="section future" style="background:url(images/bg/dif.png);">
+      <a id="kunjing"></a>
       <!-- <div class="des des-future"
       :data-1300p="fromData(index)"
       :data-1750p="toData(index)" 
@@ -129,25 +261,26 @@
       :key="index"
       v-html="article.content">
       </div> -->
-      <div class="des" style="background:url('images/difficulty/1.png') no-repeat;width:50%;height:10%;left:7.5%;" data-1700p="top:2%" data-1750p="top:0%"></div>
-      <div class="des" style="background:url('images/difficulty/2.png') no-repeat;width:50%;height:15%;left:46.4%;" data-1750p="top:8%" data-1800p="top:2%"></div>
-      <div class="des" style="background:url('images/difficulty/3.png') no-repeat;width:50%;height:15%;left:7.5%;" data-1750p="top:15%" data-1850p="top:10%"></div>
-      <div class="des" style="background:url('images/difficulty/4.png') no-repeat;width:50%;height:15%;left:46.4%;" data-1800p="top:22%" data-1850p="top:15%"></div>
-      <div class="des" style="background:url('images/difficulty/5.png') no-repeat;width:50%;height:25%;left:7.5%;" data-1850p="top:25%" data-1950p="top:20%"></div>
-      <div class="des" style="background:url('images/difficulty/6.png') no-repeat;width:50%;height:15%;left:46.4%;" data-1850p="top:45%" data-2000p="top:25%"></div>
-      <div class="des" style="background:url('images/difficulty/7.jpg') no-repeat;width:50%;height:15%;left:7.5%;" data-1950p="top:45%" data-2050p="top:20%"></div>
-      <div class="des" style="background:url('images/difficulty/8.jpg') no-repeat;width:50%;height:15%;left:46.4%;" data-1970p="top:48%" data-2050p="top:25%"></div>
-      <div class="des" style="background:url('images/difficulty/9.jpg') no-repeat;width:50%;height:25%;left:7.5%;" data-2050p="top:50%" data-2150p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/1.png') no-repeat;width:50%;height:10%;left:7.5%;" data-1950p="top:2%" data-2000p="top:0%"></div>
+      <div class="des" style="background:url('images/difficulty/2.png') no-repeat;width:50%;height:15%;left:46.4%;" data-2000p="top:8%" data-2050p="top:2%"></div>
+      <div class="des" style="background:url('images/difficulty/3.png') no-repeat;width:50%;height:15%;left:7.5%;" data-2000p="top:15%" data-2100p="top:10%"></div>
+      <div class="des" style="background:url('images/difficulty/4.png') no-repeat;width:50%;height:15%;left:46.4%;" data-2050p="top:22%" data-2100p="top:15%"></div>
+      <div class="des" style="background:url('images/difficulty/5.png') no-repeat;width:50%;height:25%;left:7.5%;" data-2100p="top:25%" data-2200p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/6.png') no-repeat;width:50%;height:15%;left:46.4%;" data-2100p="top:45%" data-2250p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/7.jpg') no-repeat;width:50%;height:15%;left:7.5%;" data-2200p="top:45%" data-2300p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/8.jpg') no-repeat;width:50%;height:15%;left:46.4%;" data-2220p="top:48%" data-2300p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/9.jpg') no-repeat;width:50%;height:25%;left:7.5%;" data-2300p="top:50%" data-2400p="top:20%"></div>
       <div id="intro" style="height:10%;width:100%;">
         <img        
           style="height:18%;width:100%;top: 60%;position: absolute;"
-          data-2080p="transform[bounce]:scale(1,1);opacity:0"
-          data-2120p="transform[bounce]:scale(1,1);opacity:1"
+          data-2330p="transform[bounce]:scale(1,1);opacity:0"
+          data-2370p="transform[bounce]:scale(1,1);opacity:1"
           src="images/difficulty/view.png">
       </div>
     </div>
 <!-- background:url(images/opinion/man.jpg);background-size:100% 50%;height: 200%;width:100%; -->
-    <div class="section opinion" style="height: 200%;">
+    <div class="section opinion" style="height: 200%;background:url(images/bg/liu.jpeg);">
+      <a id="weilai"></a>
       <transition name="fade" mode="out-in">
       <div id="opinion" v-if="show2">
         <video
@@ -157,22 +290,22 @@
         </video>
       </div>
       </transition>
-      <div id="man" data-2230p="left:22%;top:0%;" data-2300p="left:5%;top:50%;">
+      <div id="liu" data-2480p="left:22%;top:0%;" data-2550p="left:5%;top:50%;">
         <img src="images/opinion/talk.png">
       </div>
-      <div class="des des-man" data-2230p="right:-50%;top:85%;height: 25%;" data-2300p="right:3%;top:50%;height: 25%;">
+      <div class="des des-man" data-2480p="right:-50%;top:85%;height: 25%;" data-2550p="right:3%;top:50%;height: 25%;">
         <el-carousel :interval="5000" arrow="always">
         <el-carousel-item>
           <b>大量品牌涌入，市场竞争惨烈</b>
-          <p>在几年前，北京便利店行业的市场竞争并没有如今这么激烈，整个北京内只有7-11和物美这两个品牌在市场中对峙。后来随着全家、便利蜂等各大品牌的涌入，便不可同日而语。直营便利店便利蜂以一个月开三十家甚至五十家的速度迅速扩张。开店具有明确的流程，在十五天到十七天内完成从选址到最后开业的全部过程。物美在二十一天就结束了，大家都在赶时间。</p>
+          <p>在几年前，北京便利店行业的市场竞争并没有如今这么激烈，整个北京内只有7-11和物美这两个品牌在市场中对峙。后来随着全家、便利蜂等各大品牌的涌入，便不可同日而语。直营便利店便利蜂以一个月开三十家甚至五十家的速度迅速扩张。开店具有明确的流程，在十五天到十七天内完成从选址到最后开业的全部过程。物美在二十一天就结束了，<b>大家都在赶时间</b>。</p>
         </el-carousel-item>
         <el-carousel-item>
           <b>连锁店靠规模化取胜，盈利时间金钱成本双高</b>
-          <p>在北京市政府政策的支持下，除了物美、7-11等在北京有着稳固地位的便利店企业之外，还萌生出了很多新增的便利店品牌。由金融公司起家的“斑马惠购”就是一个例子。</p><p>新兴品牌的便利店都是资本投入，但由于资本逐利的特点，要求在一定时间内有一定的利润。便利店不可能在短时间内形成体系，也不可能形成利润。物美现在有400家店，但其中的将近250家都是亏损店。导致店铺亏损的因素有很多，比如房租、水电等等，和店铺的营业额没有太大的关系。</p><p>那么，在这种长期的巨额亏损的情况下，便利店到底什么时候才能盈利呢——连锁模式的便利店是靠规模取胜的。假如开50家的店的时候亏1个亿，开到100家的时候可能就亏了8000万，开200家的时候亏5000万，开到400家的时候就持平了，等到开到600家的时候，就赚钱了。因此，即使是7-11这种在全球著名的连锁便利店，在刚入驻北京的时候，也面临了同样的困境。</p>
+          <p>在北京市政府政策的支持下，除了物美、7-11等在北京有着稳固地位的便利店企业之外，还萌生出了很多新增便利店品牌——斑马惠购”就是一个例子。</p><p>新兴品牌的便利店都是资本投入，要求在一定时间内有一定的利润。但便利店不可能在短时间形成利润。在这种长期的巨额亏损的情况下，便利店到底什么时候才能盈利呢—假如开50家的店的时候亏1个亿，开到100家的时候可能就亏了8000万...开到400家的时候就持平了，等到开到600家的时候，就赚钱了。</p>
         </el-carousel-item>
         <el-carousel-item>
           <b>传统内资企业体系刻板，店铺升级效率低</b>
-          <p>便利店门店类型分为流动型、商务型、大厦型便利店。大厦类型的门店是除物美品牌以外不可能有的，因为物美是地方龙头、地方企业，受到地方保护。工行，农行这些银行的总部大厦里边都有物美的影子，连钓鱼台还有物美便利店的身影。</p><p>因为相关国家的政策，政府机构不能和日系企业合作。而物美正是靠着这些门店赚钱。这种企业一般只要物美销售额的3%当租金，其余的水电费、租金都不需要交。所以除了店员的工资，剩下的全是利润。而正是因为高昂的利润，物美才“不思进取”。</p><p>物美的店铺一直在升级，但“就是动作步子不跟迈那么大，因为怕劈了胯了”，由于内资企业传统而落后的体制，每项决策的实施都要经过很多层级，不容易进行彻底的颠覆。</p>
+          <p>农行银行总部大厦里边都有物美的影子，连钓鱼台还有物美便利店。因为龙头企业受当地保护。这种企业一般只要物美销售额的3%当租金，水电费、租金全免。所以除了店员的工资，剩下的全是利润。</p><p>物美的店铺一直升级，但而正是因为高昂的利润，物美才<b>“不思进取”</b>。由于内资企业传统而落后的体制，每项决策的实施都要经过很多层级，不容易进行彻底的颠覆。</p>
         </el-carousel-item>
       </el-carousel>
       </div>
@@ -185,8 +318,8 @@
         >
     </div>
     
-    <div class="section post">
-      <div class="des des-post" data-2930p="right:5%;top:50%;" data-3000p=right:5%;top:0%;>
+    <div class="section post" style="background:url(images/bg/hope.jpeg);">
+      <div class="des des-post" data-3180p="right:5%;top:50%;" data-3250p=right:5%;top:0%;>
         <p><span style="font-size:60px">人来人去，车来车往。</span>在无数个十字路口、街道、商厦，一家家便利店在晨曦中迎来客人，在日暮里见证奋斗的身影。王宁走了，刘店长来了，在不断的交替更迭中，我们始终相信，便利店会越来越好.......</p>
       </div>
     </div>    
@@ -209,6 +342,13 @@
     position: relative;
     height: 100% !important;
   }
+  .el-menu-item:focus, .el-menu-item:hover {
+    outline: 0;
+    background-color: #edb668 !important;
+}
+.fullheight{
+  height: 100%;
+}
 </style>
 
 <style scoped>
@@ -277,6 +417,10 @@ video{
   position: absolute;
   z-index: 3;
 }
+#liu{
+  height:100%;
+  position: absolute;  
+}
 .des{
   text-align: justify;
   background-color: rgba(255, 255, 255, 0.5);
@@ -288,43 +432,47 @@ video{
   width: 45%;
   margin: 15% 5%;
   padding: 5%;
-  font-size: 30px;
+  font-size: 28px;
 }
 .des-store{
   width: 40%;
   margin: 15% 5%;
   padding: 5%;
-  font-size: 30px;
+  font-size: 28px;
 }
 .des-scan{
   width: 30%;
   height: 50%;
   margin: 15% 0;
   padding: 5%;
-  font-size: 30px;
+  font-size: 28px;
 }
 .des-pre{
   width: 60%;
   height: 70%;
   margin: 5% 0;
   padding: 5%;
-  font-size: 30px;
+  font-size: 28px;
 }
 .des-future{
   width: 45%;
   height: 20%;
-  font-size: 30px;
+  font-size: 28px;
 }
 .des-post{
   width: 60%;
   height: 50%;
   margin: 5% 0;
   padding: 5%;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1.5;
 }
 .timeline{
-  height: 650%;
+  height: 700%;
+  background: linear-gradient(to bottom,#fff,#ffbf42);
+}
+.talk{
+  height: 300%;
 }
 .future{
   height: 600%;
@@ -332,6 +480,9 @@ video{
 }
 .post{
   height: 60%;
+}
+.opinion{  
+  background: linear-gradient(to bottom,#fff,#f8dc65);
 }
 </style>
 
@@ -350,14 +501,16 @@ video{
       return {
         show: true,
         show2: true,
+        isCollapse: false,
+        isActive: false,
         sliderList: [
           {
-            des: '<p>日本便利店：温度适宜，窗明几净。无论何时去便利店蹭杂志都不会尴尬，日本便利店是熟悉的驿站。站读文化”是日本便利店特有的一道风景线。</p><p>不让客人等待，是日本便利店服务的一大原则。一旦客人排队，其他店员会立即跑到其他的收银台，一边向客人致歉，一边给客人结帐。是不是需要加热，是否需要筷子和勺子？”“饮料类是否需要吸管”？驿站服务，一站服务，无论何时何地，日本便利店都是行业的标杆。</p>',
+            des: '<p>日本便利店：日本便利店是熟悉的驿站。“站读文化”是日本便利店特有的一道风景线。不让客人等待也是日本便利店服务的一大原则。一旦客人排队，其他店员会立即跑到其他的收银台，一边向客人致歉，一边给客人结帐并提供一站式驿站服务。无论何时何地，日本便利店都是行业的标杆。</p>',
             video: 'video/slider/jp.mp4',
             poster: 'images/slider/jp.jpg'
           },
           {
-            des: '<p>便利店最早起源于美国，但是在美国，由于面积大，人口少，所以便利店对于他们来说意义不大，因为人都居住得比较分散，所以大型的shopping mall才是美国特色，再加上由于竞争激烈，便利店盈利不大，导致便利店在美国普遍不多。通常美国人会把购物当作一种任务，每周会定期去大型超市去购买商品。</p>',
+            des: '<p>便利店最早起源于美国。但由于面积大，人口少，便利店对美国人而言意义不大，分散的居住点使得大型的shopping mall才是美国特色，美国人把购物当作一种任务，每周定期去大型超市进行采购。此外，激烈的竞争和极低的利润导致便利店在美国普遍不多。所以，美国便利店多开在加油站中，白领通常会在通勤途中进入加油站，并非为了加油，而是为了去便利店购物。</p>',
             video: 'video/slider/us.mp4',
             poster: 'images/slider/us.jpg'
           },
@@ -367,7 +520,7 @@ video{
             poster: 'images/slider/oil.jpg'
           },
           {
-            des: '<p>韩国便利店：在韩国，和咖啡店一样随处可见的便是各式各样的便利店了。无论是上班族忙中得闲的美味午餐，还是观光客们填饱肚子的特色小食都可以在便利店中寻觅的到。便利店更是众多浪漫韩剧必备的拍摄地点，男女主人公在便利店门口的小桌上分享着一杯热乎乎的拉面看着都如此美好。“除了没有的都有了”，韩国人这么形容便利店。</p><p>除了销售食物、生活用品、换钱、购买电话卡、手机充电等基础服务外，便利店还提供单人家庭便民服务、定制型服务。韩国多家便利店品牌多推出了快递配送服务。顾客可凭条形码到便利店取货或由便利店职员送货上门。此外，韩国还出现了提供洗涤服务的便利店。</p>',
+            des: '<p>韩国便利店：在韩国，便利店和咖啡店一样随处可见。无论是上班族的午餐，还是游客喜爱的特色小食都可以在这里找到。便利店更是众多浪漫韩剧必备的拍摄地点，男女主人公在便利店门口的小桌上分享着一杯热乎乎的拉面看着都如此美好。“除了没有的都有了”，韩国人这么形容便利店。韩国多家便利店品牌还多推出了快递配送服务。顾客可凭条形码到便利店取货或由便利店职员送货上门。此外，韩国还有提供洗涤服务的便利店。</p>',
             video: 'video/slider/kr.mp4',
             poster: 'images/slider/kr.jpg'
           }
@@ -420,6 +573,7 @@ video{
     },
     mounted () {
       this.show = true
+      this.$refs.nav.close('1')
       var s = skrollr.init({
         smoothScrolling: true,
         smoothScrollingDuration: 100,
@@ -433,6 +587,12 @@ video{
       })
     },
     methods: {
+      handleOpen () {
+        this.isActive = true
+      },
+      handleClose () {
+        this.isActive = false
+      },
       end () {
         this.show = !this.show
       },
