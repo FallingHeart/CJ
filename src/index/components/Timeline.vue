@@ -24,9 +24,12 @@
           <a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a> -->
           <span class="cd-date"></span>
           <video
+            ref="first"
             controls="controls"
+            poster="images/thumbnail/first.jpg"
+            @mouseover="playVideo('first')"
             >
-            <source src="video/first.mp4" type="video/mp4" />
+            <source src="http://ptmwfaugr.bkt.clouddn.com/video/first.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -181,6 +184,11 @@ export default {
         timeline.showBlocks()
       })
       scrolling = false
+    }
+  },
+  methods: {
+    playVideo (key) {
+      this.$refs[key].play()
     }
   }
 }
