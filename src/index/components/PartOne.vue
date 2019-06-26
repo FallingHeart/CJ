@@ -3,7 +3,10 @@
 
         <!-- background:url(images/man.jpg);background-size:100% 100%;height: 100%;width:100% -->
     <div class="section opening" style="background:url(images/bg/first.png);background-size:100% 100%;height: 100%;width:100%">
-      <div style="position:fixed;z-index:999;background-color:#65625aad;" v-bind:class="{ fullheight: isActive }">
+      <div style="position:fixed;z-index:999;background-color:#65625aad;"
+        v-bind:class="{ fullheight: isActive }"
+        @mouseover="openNav"
+        @mouseleave="closeNav">
         <el-menu
           ref="nav"
           default-active="#jishi"
@@ -355,7 +358,12 @@
 </div>
 </template>
 <style>
-
+.el-submenu__icon-arrow{
+  display: none !important;
+}
+.el-menu-item.is-active{
+  color: #fff !important;
+}
   .el-carousel__container {
     position: relative;
     height: 100% !important;
@@ -617,6 +625,14 @@ video{
       },
       handleClose () {
         this.isActive = false
+      },
+      openNav () {
+        this.$refs.nav.open('1')
+        this.handleOpen()
+      },
+      closeNav () {
+        this.$refs.nav.close('1')
+        this.handleClose()
       },
       end () {
         this.show = !this.show
