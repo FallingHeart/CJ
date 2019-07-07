@@ -1,6 +1,6 @@
 <template>
   <div id="cd-timeline" class="cd-container" style="background: url('images/bg/his.png');">
-      <div class="cd-timeline-block" v-for="(item, index) in list" :key="index">
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(0,1)" :key="index">
         <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
           <img src="assets/img/cd-icon-picture.svg" alt="Picture">
         </div>
@@ -13,16 +13,14 @@
           <img :src="'images/timeline/'+item.img+'.png'" alt="">
         </div>
       </div>
+
       <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
+        <div class="cd-timeline-img cd-picture cd-movie" style="display: none;">
           <img src="assets/img/cd-icon-picture.svg" alt="Picture">
         </div>
-
         <div class="cd-timeline-content">
-          <h2>全球第一支便利店广告</h2>
-          <!-- <p>{{item.event}}</p>
-          <a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a> -->
-          <span class="cd-date"></span>
+          <span class="cd-date">1946年</span>
+          <img src="images/timeline/1946.png" alt="">
           <video
             ref="first"
             controls="controls"
@@ -31,6 +29,20 @@
             >
             <source src="http://ptmwfaugr.bkt.clouddn.com/video/first.mp4" type="video/mp4" />
           </video>
+        </div>
+      </div>
+
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(2,list.length)" :key="index">
+        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
+          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
+        </div>
+
+        <div class="cd-timeline-content">
+          <!-- <h2>{{item.place}}</h2>
+          <p>{{item.event}}</p>
+          <a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a> -->
+          <span class="cd-date">{{item.time}}</span>
+          <img :src="'images/timeline/'+item.img+'.png'" alt="">
         </div>
       </div>
 
@@ -277,7 +289,7 @@ Main components
 
 .cd-timeline-block {
   position: relative;
-  margin: 2em 0;
+  margin: -4em 0 2em;
 }
 .cd-timeline-block:after {
   content: "";
@@ -292,7 +304,7 @@ Main components
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
-    margin: 4em 0;
+    margin: -6em 0 4em;
   }
   .cd-timeline-block:first-child {
     margin-top: 0;

@@ -3,7 +3,7 @@
 
         <!-- background:url(images/man.jpg);background-size:100% 100%;height: 100%;width:100% -->
     <div class="section opening" style="background:url(images/bg/first.png);background-size:100% 100%;height: 100%;width:100%">
-      <div style="position:fixed;z-index:999;background-color:#65625aad;"
+      <div style="position:fixed;z-index:999;background-color:none;font-family:宋体;"
         v-bind:class="{ fullheight: isActive }"
         @mouseover="openNav"
         @mouseleave="closeNav">
@@ -211,8 +211,8 @@
       </div>
 
       <div><img src="images/talk/12.png" alt=""
-        data-1660p="left:100%;top:2%;"
-        data-1680p="left:60%;top:45%;"
+        data-1660p="right:100%;top:2%;"
+        data-1680p="right:60%;top:45%;"
         style="position:absolute">
       </div>
       
@@ -358,6 +358,9 @@
 </div>
 </template>
 <style>
+.el-menu {
+  border-right: none !important;
+}
 .el-submenu__icon-arrow{
   display: none !important;
 }
@@ -373,7 +376,7 @@
     background-color: #edb668 !important;
 }
 .fullheight{
-  height: 100%;
+  height: 100%;background-color:#65625aad;
 }
 </style>
 

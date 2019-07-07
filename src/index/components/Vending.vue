@@ -7,20 +7,20 @@
     <img class="logo row2 col2" src="images/logo/尤拉logo.png" @click="lightbox('yl')" alt="尤拉超市">
     <img class="logo row2 col3" src="images/logo/全家logo.png" @click="lightbox('qj')" alt="全家霞公府">
     <!-- <img class="output" src="#"> -->
-    <img class="button" src="images/gotoContent.png" @click="gotoContent()">
+    <img class="button" src="images/gotoContent.gif" @click="gotoContent()">
     <!-- <div id="scene">
         <div data-depth="0.2">My first Layer!</div>
         <div data-depth="0.6">My second Layer!</div>
     </div> -->
     <el-dialog :title="card.name" :visible.sync="dialogVisible" style="text-align:center;">
-      <img :src="card.img" :alt="card.des" style="height:100%;width: 100%;">
+      <img :src="card.img" :alt="card.des" style="height:100%;width: 100%;margin-top: -48px;">
     </el-dialog>
   </div>    
 </template>
 
 <style>
 .el-dialog__wrapper .el-dialog .el-dialog__header{
-  display: none;
+  /* display: none; */
 }
 .el-dialog__wrapper .el-dialog .el-dialog__body{
   height: 100%;
@@ -58,11 +58,21 @@
     height: 100px;
 } */
 .button{
-  width: 22%;
-  height: 11%;
+  width: 20%;
+  height: 10%;
   top: 77%;
-  right: 10%;
+  right: 12%;
   position: absolute;
+  animation: transbutton 0.5s infinite alternate;
+}
+@keyframes transbutton
+{
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(200%);
+  }
 }
 </style>
 
