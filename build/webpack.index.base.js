@@ -10,6 +10,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: {
+    polyfills: path.resolve(__dirname, '../src/index/polyfills.js'),
     app: path.resolve(__dirname, '../src/index/index.js'),
     css: 'element-ui/lib/theme-chalk/index.css',
     style: path.resolve(__dirname, '../src/index/assets/style/style.css')
@@ -55,6 +56,17 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+          // 这部分写在.babelrc里面
+          // options: {
+          //   presets: ['@babel/preset-env']
+          // }
+        }
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
