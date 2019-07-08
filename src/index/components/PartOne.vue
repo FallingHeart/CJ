@@ -46,9 +46,9 @@
       </div>
       </transition>
       <div id="man" data-0="left:42%;top:0%;" data-100p="left:-40%;top:100%;">
-        <img src="images/opening/man.png">
+        <img src="images/opening/man.png" style="width:100%">
       </div>
-      <div class="des des-man" data-top="left:5%" data-top-bottom="left:-100%">
+      <div class="des des-man" data-0="left:5%" data-100p="left:-100%">
         <p>“微信支付宝？”王宁在最后三个字上顿了几顿，显得字字分明。他左手虚点着收银台键盘，低头盯着收银台，目光并不从屏幕上离开。</p>
         <p>“微信吧。”顾客打开微信支付，将它向前伸到王宁手边。</p>
         <p>王宁右手握上扫码器，翻花似的在半空中利落地转了一圈手腕，然后用扫码器的红外线对准条形码，一声清脆的“嘀”。</p>
@@ -57,7 +57,7 @@
 
     <div class="section store" style="background:url(images/bg/store.png);background-size:100% 100%;height: 100%;width:100%">
       <div id="store" data-0="right:50%;top:0%;" data-100p="right:0%;top:0%;">
-        <img src="images/opening/store.png">
+        <img src="images/opening/store.png" style="width:100%">
       </div>
       <div class="des des-store" data-0="right:80%;" data-100p="right:45%;">
         <p>这是王宁在北京东花市物美便利店工作的第二年。2017年10月，他从老家河南来到北京，先在餐饮行业管了几个月库房，然后在18年经朋友介绍加入物美，“这里待遇更好一点，现在每个月八九千吧。”</p>
@@ -80,7 +80,7 @@
 
     <div class="section intro" style="background:url(images/bg/store.png);background-size:100% 100%;height: 100%;width:100%">
       <div id="scan" data-200p="right:0%;top:0%;" data-300p="right:50%;top:0%;">
-        <img src="images/opening/scan.png">
+        <img src="images/opening/scan.png" style="width:100%">
       </div>
       <div class="des des-scan" data-200p="left:5%;" data-300p="left:45%;">
         <p>物美便利店的工作分早晚班。王宁通常是早班，早上八点到店，简单地与晚班人员交接，然后到店内的隔间中换上大红色的物美工作服。接下来，他会一边整理货架一边接待顾客，迎接整整十二个小时的忙碌。</p>
@@ -102,12 +102,12 @@
     </div>
 
     <div class="section sequence" style="background:url(images/bg/store.png);background-size:100% 100%;height: 100%;width:100%">
-      <div class="des des-scan" data-400p="left:5%;top:5%;" data-500p="left:5%;top:-10%;">
+      <div class="des des-seq" data-400p="left:5%;top:20%;" data-500p="left:5%;top:10%;">
         <p>晚班的顾客相对少，但也并不十分清闲。公司每天都会派人来送货，分两拨。</p>
         <p>第一拨速冻食品，一般凌晨一两点来，如果当天货品少，还可能到四点多；</p>
         <p>第二拨是常温货品，固定在四五点天将亮未亮之时抵达。</p>
       </div>
-      <div id="sequence" data-400p="left:50%;top:5%;" data-500p="left:50%;top:30%;" style="height:50%;width:50%;position:absolute;z-index:2;">
+      <div id="sequence" data-400p="left:48%;top:5%;" data-500p="left:48%;top:30%;" style="height:50%;width:50%;position:absolute;z-index:2;">
         <video
           ref="purchase"
           controls="controls"
@@ -121,7 +121,8 @@
 
     <div class="section sequence" style="background:url(images/bg/wumei.png);background-size:100% 100%;height: 100%;width:100%">
       <div class="des des-pre" style="right:5%;top:0%;">
-        <p><span style="font-size:60px">物美便利店</span>在标准化便利店的经营模式的基础上，又很好地融入了北京本土小卖部和超市的传统：物美便利店可以使用物美超市卡，这对老年人尤其有吸引力——刚从国瑞商场旁的物美便利店出来的刘女士今年72岁，拖着一辆布袋购物车，手上拿着物美超市卡：“它们（标准化便利店）那个什么手机支付我不会用，我一般就用卡和现金。”对他们来说，标准化的便利店仿佛是只有都市年轻人才会光顾的场所。</p>
+        <p><span style="font-size:2.5em">物美便利店</span>在标准化便利店的经营模式的基础上，又很好地融入了北京本土小卖部和超市的传统：</p>
+        <p>物美便利店可以使用物美超市卡，这对老年人尤其有吸引力——刚从国瑞商场旁的物美便利店出来的刘女士今年72岁，拖着一辆布袋购物车，手上拿着物美超市卡：“它们（标准化便利店）那个什么手机支付我不会用，我一般就用卡和现金。”对他们来说，标准化的便利店仿佛是只有都市年轻人才会光顾的场所。</p>
         <p>但物美也在求新求变。</p>
         <p>2017年4月,物美与新零售平台多点联合推出的“自由购”手机自助结帐,只需扫描商品码并线上支付,就可跳过收银台结账环节。</p>
         <p>2018年12月11日，物美旗下多点便利店宣布开通外卖业务，接入O2O模式。</p>
@@ -146,108 +147,108 @@
     
     <div class="section talk" style="background:url(images/bg/talk.png);">
       <div><img src="images/talk/1.png" alt=""
-        data-1500p="left:100%;top:2%;"
-        data-1600p="left:68.2%;top:3%;"
-        data-1780p="left:68.2%;top:66%;"
+        data-1150p="left:100%;top:2%;"
+        data-1250p="left:68.2%;top:3%;"
+        data-1430p="left:68.2%;top:66%;"
         style="position:absolute">
       </div>
       <div><img src="images/talk/2.png" alt=""
-        data-1500p="left:100%;top:2%;"
-        data-1600p="left:52.3%;top:3%;"
-        data-1780p="left:52.3%;top:66%;"
+        data-1150p="left:100%;top:2%;"
+        data-1250p="left:52.3%;top:3%;"
+        data-1430p="left:52.3%;top:66%;"
         style="position:absolute">
       </div>
       <div><img src="images/talk/3.png" alt=""
-        data-1500p="right:100%;top:2%;"
-        data-1600p="right:70%;top:3%;"
-        data-1780p="right:70%;top:66%;"
+        data-1150p="right:100%;top:2%;"
+        data-1250p="right:70%;top:3%;"
+        data-1430p="right:70%;top:66%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/4.png" alt=""
-        data-1540p="left:100%;top:2%;"
-        data-1560p="left:60%;top:3%;"
+        data-1190p="left:100%;top:2%;"
+        data-1210p="left:60%;top:3%;"
         style="position:absolute">
       </div>
       <div><img src="images/talk/5.png" alt=""
-        data-1540p="right:100%;top:2%;"
-        data-1560p="right:60%;top:6%;"
+        data-1190p="right:100%;top:2%;"
+        data-1210p="right:60%;top:6%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/6.png" alt=""
-        data-1560p="left:100%;top:2%;"
-        data-1580p="left:60%;top:9%;"
+        data-1210p="left:100%;top:2%;"
+        data-1230p="left:60%;top:9%;"
         style="position:absolute">
       </div>
       <div><img src="images/talk/7.png" alt=""
-        data-1560p="right:100%;top:2%;"
-        data-1580p="right:60%;top:12%;"
+        data-1210p="right:100%;top:2%;"
+        data-1230p="right:60%;top:12%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/8.png" alt=""
-        data-1580p="left:100%;top:2%;"
-        data-1600p="left:60%;top:15%;"
+        data-1230p="left:100%;top:2%;"
+        data-1250p="left:60%;top:15%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/9.png" alt=""
-        data-1640p="right:100%;top:2%;"
-        data-1660p="right:60%;top:36%;"
+        data-1290p="right:100%;top:2%;"
+        data-1310p="right:60%;top:36%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/10.png" alt=""
-        data-1640p="left:100%;top:2%;"
-        data-1660p="left:60%;top:39%;"
+        data-1290p="left:100%;top:2%;"
+        data-1310p="left:60%;top:39%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/11.png" alt=""
-        data-1660p="right:100%;top:2%;"
-        data-1680p="right:60%;top:42%;"
+        data-1310p="right:100%;top:2%;"
+        data-1330p="right:60%;top:42%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/12.png" alt=""
-        data-1660p="right:100%;top:2%;"
-        data-1680p="right:60%;top:45%;"
+        data-1310p="right:100%;top:2%;"
+        data-1330p="right:60%;top:45%;"
         style="position:absolute">
       </div>
       
       <div><img src="images/talk/13.png" alt=""
-        data-1720p="left:50%;top:2%;margin-left:-1px;width:2px;"
-        data-1740p="left:50%;top:51%;;margin-left:-244px;width:488px;"
+        data-1370p="left:50%;top:2%;margin-left:-1px;width:2px;"
+        data-1390p="left:50%;top:51%;;margin-left:-244px;width:488px;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/14.png" alt=""
-        data-1740p="left:100%;top:2%;"
-        data-1760p="left:60%;top:72%;"
+        data-1390p="left:100%;top:2%;"
+        data-1410p="left:60%;top:72%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/15.png" alt=""
-        data-1740p="right:100%;top:2%;"
-        data-1760p="right:60%;top:75%;"
+        data-1390p="right:100%;top:2%;"
+        data-1410p="right:60%;top:75%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/17.png" alt=""
-        data-1760p="left:100%;top:2%;"
-        data-1780p="left:60%;top:84%;"
+        data-1410p="left:100%;top:2%;"
+        data-1430p="left:60%;top:84%;"
         style="position:absolute">
       </div>
 
       <div><img src="images/talk/16.png" alt=""
-        data-1760p="right:100%;top:2%;"
-        data-1780p="right:60%;top:81%;"
+        data-1410p="right:100%;top:2%;"
+        data-1430p="right:60%;top:81%;"
         style="position:absolute">
       </div>
     </div>
     
-    <div class="section slider" style="background:url(images/slider.png)">
+    <div class="section slider" style="background:url(images/slider.png) 0 0 / contain no-repeat">
       <el-carousel :interval="5000" arrow="always">
         <el-carousel-item v-for="(slider,index) in sliderList" :key="index">
           <el-row style="height:80%;margin-top: 15%;">
@@ -259,7 +260,7 @@
               controls="controls" 
               @mouseover="playVideo(slider.ref)"></video>
             </el-col>
-            <el-col :span="10" :offset="2" v-html="slider.des" style="line-height:1.5;font-size: 28px;background-color:#fef4ca;padding:5%"></el-col>
+            <el-col :span="10" :offset="2" v-html="slider.des" style="line-height:1.5;font-size: 2.5vh;background-color:#fef4ca;padding:5%"></el-col>
           </el-row>
         </el-carousel-item>
       </el-carousel>
@@ -269,32 +270,32 @@
     <div class="section future" style="background:url(images/bg/dif.png);">
       <a id="kunjing"></a>
       <!-- <div class="des des-future"
-      :data-1300p="fromData(index)"
-      :data-1750p="toData(index)" 
+      :data-950p="fromData(index)"
+      :data-1400p="toData(index)" 
       style="padding:5%;"
       v-for="(article,index) in difficulties"
       :key="index"
       v-html="article.content">
       </div> -->
-      <div class="des" style="background:url('images/difficulty/1.png') no-repeat;width:50%;height:10%;left:7.5%;" data-1950p="top:2%" data-2000p="top:0%"></div>
-      <div class="des" style="background:url('images/difficulty/2.png') no-repeat;width:50%;height:15%;left:46.4%;" data-2000p="top:8%" data-2050p="top:2%"></div>
-      <div class="des" style="background:url('images/difficulty/3.png') no-repeat;width:50%;height:15%;left:7.5%;" data-2000p="top:15%" data-2100p="top:10%"></div>
-      <div class="des" style="background:url('images/difficulty/4.png') no-repeat;width:50%;height:15%;left:46.4%;" data-2050p="top:22%" data-2100p="top:15%"></div>
-      <div class="des" style="background:url('images/difficulty/5.png') no-repeat;width:50%;height:25%;left:7.5%;" data-2100p="top:25%" data-2200p="top:20%"></div>
-      <div class="des" style="background:url('images/difficulty/6.png') no-repeat;width:50%;height:15%;left:46.4%;" data-2100p="top:45%" data-2250p="top:25%"></div>
-      <div class="des" style="background:url('images/difficulty/7.jpg') no-repeat;width:50%;height:15%;left:7.5%;" data-2200p="top:45%" data-2300p="top:20%"></div>
-      <div class="des" style="background:url('images/difficulty/8.jpg') no-repeat;width:50%;height:15%;left:46.4%;" data-2220p="top:48%" data-2300p="top:25%"></div>
-      <div class="des" style="background:url('images/difficulty/9.jpg') no-repeat;width:50%;height:25%;left:7.5%;" data-2300p="top:50%" data-2400p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/1.png') 0 0 / contain no-repeat;width:50%;height:10%;left:7.5%;" data-1600p="top:2%" data-1650p="top:0%"></div>
+      <div class="des" style="background:url('images/difficulty/2.png') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1650p="top:8%" data-1700p="top:2%"></div>
+      <div class="des" style="background:url('images/difficulty/3.png') 0 0 / contain no-repeat;width:50%;height:15%;left:7.5%;" data-1650p="top:15%" data-1750p="top:10%"></div>
+      <div class="des" style="background:url('images/difficulty/4.png') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1700p="top:22%" data-1750p="top:15%"></div>
+      <div class="des" style="background:url('images/difficulty/5.png') 0 0 / contain no-repeat;width:50%;height:25%;left:7.5%;" data-1750p="top:25%" data-1850p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/6.png') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1750p="top:45%" data-1900p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/7.jpg') 0 0 / contain no-repeat;width:50%;height:15%;left:7.5%;" data-1850p="top:45%" data-1950p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/8.jpg') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1870p="top:48%" data-1950p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/9.jpg') 0 0 / contain no-repeat;width:50%;height:25%;left:7.5%;" data-1950p="top:50%" data-2050p="top:20%"></div>
       <div id="intro" style="height:10%;width:100%;">
         <img        
           style="height:18%;width:100%;top: 60%;position: absolute;"
-          data-2330p="transform[bounce]:scale(1,1);opacity:0"
-          data-2370p="transform[bounce]:scale(1,1);opacity:1"
+          data-1980p="transform[bounce]:scale(1,1);opacity:0"
+          data-2020p="transform[bounce]:scale(1,1);opacity:1"
           src="images/difficulty/view.png">
       </div>
     </div>
 <!-- background:url(images/opinion/man.jpg);background-size:100% 50%;height: 200%;width:100%; -->
-    <div class="section opinion" style="height: 200%;background:url(images/bg/liu.jpeg);">
+    <div class="section opinion" style="height: 200%;background:url(images/bg/liu.jpeg) 0 0 / cover no-repeat;">
       <a id="weilai"></a>
       <transition name="fade" mode="out-in">
       <div id="opinion" v-if="show2">
@@ -308,10 +309,10 @@
         </video>
       </div>
       </transition>
-      <div id="liu" data-2480p="left:22%;top:0%;" data-2550p="left:5%;top:50%;">
-        <img src="images/opinion/talk.png">
+      <div id="liu" data-2130p="left:22%;top:0%;width: 50%;" data-2200p="left:5%;top:50%;width: 50%;">
+        <img src="images/opinion/talk.png" style="width: 100%;">
       </div>
-      <div class="des des-man" data-2480p="right:-50%;top:85%;height: 25%;" data-2550p="right:3%;top:50%;height: 25%;">
+      <div class="des des-liu" data-2130p="right:-50%;top:65%;" data-2200p="right:3%;top:50%;">
         <el-carousel :interval="5000" arrow="always">
         <el-carousel-item>
           <b>大量品牌涌入，市场竞争惨烈</b>
@@ -337,8 +338,8 @@
     </div>
     
     <div class="section post" style="background:url(images/bg/hope.jpeg);">
-      <div class="des des-post" data-3180p="right:5%;top:50%;" data-3250p=right:5%;top:0%;>
-        <p><span style="font-size:60px">人来人去，车来车往。</span>在无数个十字路口、街道、商厦，一家家便利店在晨曦中迎来客人，在日暮里见证奋斗的身影。王宁走了，刘店长来了，在不断的交替更迭中，我们始终相信，便利店会越来越好.......</p>
+      <div class="des des-post" data-2830p="right:5%;top:50%;" data-2900p=right:5%;top:0%;>
+        <p><span style="font-size:5vh">人来人去，车来车往。</span>在无数个十字路口、街道、商厦，一家家便利店在晨曦中迎来客人，在日暮里见证奋斗的身影。王宁走了，刘店长来了，在不断的交替更迭中，我们始终相信，便利店会越来越好.......</p>
       </div>
     </div>    
 
@@ -433,15 +434,18 @@ video{
   /* opacity: 0; */
 }
 #man{
+  width:38.5%;
   height:100%;
   position: absolute;
 }
 #store{
+  width:50%;
   height: 100%;
   position: absolute;
   z-index: 1;
 }
-#scan{  
+#scan{
+  width:44.7%;
   height:100%;
   position: absolute;
   z-index: 3;
@@ -458,46 +462,64 @@ video{
 
 }
 .des-man{
-  width: 45%;
-  margin: 15% 5%;
-  padding: 5%;
-  font-size: 28px;
+  width: 40%;
+  height: 85%;
+  margin: 5% 5%;
+  padding: 0 5%;
+  font-size: 4vh;
 }
 .des-store{
   width: 40%;
-  margin: 15% 5%;
-  padding: 5%;
-  font-size: 28px;
+  height: 75%;
+  margin: 5% 5%;
+  padding: 0 5%;
+  font-size: 3vh;
 }
 .des-scan{
-  width: 30%;
+  width: 40%;
   height: 50%;
-  margin: 15% 0;
-  padding: 5%;
-  font-size: 28px;
+  margin: 5% 0;
+  padding: 0 5%;
+  font-size: 4vh;
+  top: 20%;
+}
+.des-seq{
+  width: 35%;
+  height: 50%;
+  margin: 5% 0;
+  padding: 0 5%;
+  font-size: 4vh;
+  top: 20%;
 }
 .des-pre{
   width: 60%;
-  height: 70%;
-  margin: 5% 0;
-  padding: 5%;
-  font-size: 28px;
+  height: 80%;
+  margin: 0;
+  padding: 0 5%;
+  font-size: 2.5vh;
 }
 .des-future{
   width: 45%;
   height: 20%;
   font-size: 28px;
 }
+.des-liu{
+  width: 40%;
+  height: 80%;
+  margin: 5% 5%;
+  padding: 5%;
+  font-size: 3.5vh;
+}
 .des-post{
   width: 60%;
   height: 50%;
   margin: 5% 0;
   padding: 5%;
-  font-size: 28px;
+  font-size: 4vh;
   line-height: 1.5;
 }
 .timeline{
-  height: 700%;
+  height: 350%;
   background: linear-gradient(to bottom,#fff,#ffbf42);
 }
 .talk{
@@ -621,7 +643,8 @@ video{
     },
     methods: {
       playVideo (key) {
-        this.$refs[key].play()
+        // this.$refs[key].play()
+        console.log(key)
       },
       handleOpen () {
         this.isActive = true

@@ -1,8 +1,8 @@
 <template>
-<div style="position:relative;overflow:hidden;background-color:#F6DC65;">
+<div style="position:relative;overflow:hidden;background-color:#F6DC65;height: 100%;">
   <div class="historyback"
-    data-650p="top:0px"
-    data-750p="top:1080px">
+    data-650p="top:0vh"
+    data-750p="top:100vh">
   </div>
   <img
     :src="historyBlock"
@@ -23,7 +23,7 @@
 .historyback{
   background-color: #F6B458;
   width:100%;
-  height:1080px;
+  height:100%;
   position:relative;
 }
 </style>

@@ -1,10 +1,7 @@
 <template>
   <div id="cd-timeline" class="cd-container" style="background: url('images/bg/his.png');">
-      <div class="cd-timeline-block" v-for="(item, index) in list.slice(0,1)" :key="index">
-        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
-          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
-        </div>
 
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(0,1)" :key="'1'+index">
         <div class="cd-timeline-content">
           <!-- <h2>{{item.place}}</h2>
           <p>{{item.event}}</p>
@@ -15,28 +12,42 @@
       </div>
 
       <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture cd-movie" style="display: none;">
-          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
-        </div>
         <div class="cd-timeline-content">
           <span class="cd-date">1946年</span>
-          <img src="images/timeline/1946.png" alt="">
+          <img src="images/timeline/1946.png" alt="" style="height:25%">
           <video
             ref="first"
             controls="controls"
             poster="images/thumbnail/first.jpg"
             @mouseover="playVideo('first')"
+            style="height:75%"
             >
             <source src="http://ptmwfaugr.bkt.clouddn.com/video/first.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
 
-      <div class="cd-timeline-block" v-for="(item, index) in list.slice(2,list.length)" :key="index">
-        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
-          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(2,6)" :key="'2'+index">
+        <div class="cd-timeline-content">
+          <!-- <h2>{{item.place}}</h2>
+          <p>{{item.event}}</p>
+          <a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a> -->
+          <span class="cd-date">{{item.time}}</span>
+          <img :src="'images/timeline/'+item.img+'.png'" alt="">
         </div>
+      </div>
 
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(6,9)" :key="'2'+index">
+        <div class="cd-timeline-content" style="height:20vh">
+          <!-- <h2>{{item.place}}</h2>
+          <p>{{item.event}}</p>
+          <a href="http://www.helloweba.com/view-blog-284.html" class="cd-read-more" target="_blank">阅读全文</a> -->
+          <span class="cd-date">{{item.time}}</span>
+          <img :src="'images/timeline/'+item.img+'.png'" alt="" style="height:100%">
+        </div>
+      </div>
+
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(9,list.length)" :key="'2'+index">
         <div class="cd-timeline-content">
           <!-- <h2>{{item.place}}</h2>
           <p>{{item.event}}</p>
@@ -47,11 +58,7 @@
       </div>
 
       <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture cd-movie" style="display:none">
-          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
-        </div>
-
-        <div class="cd-timeline-content">
+        <div class="cd-timeline-content" style="height:15vh">
           <img :src="'images/timeline/tobe.png'" alt="">
         </div>
       </div>
@@ -200,7 +207,8 @@ export default {
   },
   methods: {
     playVideo (key) {
-      this.$refs[key].play()
+      // this.$refs[key].play()
+      console.log(key)
     }
   }
 }
@@ -233,6 +241,7 @@ body {
 
 
 img {
+  height: 100%;
   max-width: 100%;
 }
 
@@ -364,11 +373,13 @@ Main components
 }
 
 .cd-timeline-content {
+    height: 36vh;
+    overflow: hidden;
   position: relative;
   margin-left: 60px;
   background: white;
   border-radius: 0.25em;
-  padding: 1em;
+  /* padding: 1em; */
   box-shadow: 0 3px 0 #d7e4ed;
 }
 .cd-timeline-content:after {
@@ -433,7 +444,7 @@ a.cd-read-more:hover{text-decoration:none; background-color: #424242;  }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
     margin-left: 0;
-    padding: 1.6em;
+    /* padding: 1.6em; */
     width: 45%;
   }
   .cd-timeline-content::before {
