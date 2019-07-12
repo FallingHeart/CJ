@@ -38,8 +38,11 @@
       <transition name="fade" mode="out-in">
       <div id="opening" v-if="show">
         <video
-         autoplay="autoplay"
+          ref="open"
+          autoplay="autoplay"
           controls="controls"
+          @mouseover="playVideo('open')"
+          @mouseout="pauseVideo('open')"
           @ended="end">
           <source src="http://ptmwfaugr.bkt.clouddn.com/video/opening.mp4" type="video/mp4" />
         </video>
@@ -72,7 +75,8 @@
           controls="controls"
           poster="images/thumbnail/intro.jpg"
           @mouseover="playVideo('intro')"
-          @ended="end">
+          @mouseout="pauseVideo('intro')"
+          >
           <source src="http://ptmwfaugr.bkt.clouddn.com/video/intro.mp4" type="video/mp4" />
         </video>
       </div>
@@ -95,6 +99,7 @@
           controls="controls"
           poster="images/thumbnail/scan.jpg"
           @mouseover="playVideo('scan')"
+          @mouseout="pauseVideo('scan')"
           >
           <source src="http://ptmwfaugr.bkt.clouddn.com/video/scan.mp4" type="video/mp4" />
         </video>
@@ -113,6 +118,7 @@
           controls="controls"
           poster="images/thumbnail/purchase.jpeg"
           @mouseover="playVideo('purchase')"
+          @mouseout="pauseVideo('purchase')"
           >
           <source src="http://ptmwfaugr.bkt.clouddn.com/video/purchase.mp4" type="video/mp4" />
         </video>
@@ -255,10 +261,13 @@
             <el-col :span="10" :offset="1" style="margin-top: 10%;">
               <video
               :ref="slider.ref"
-              :poster="slider.poster"
-              :src="slider.video"
+              :poster="slider.poster"              
               controls="controls" 
-              @mouseover="playVideo(slider.ref)"></video>
+              @mouseover="playVideo(slider.ref)"
+              @mouseout="pauseVideo(slider.ref)"
+              >
+                <source :src="slider.video" type="video/mp4" />
+              </video>
             </el-col>
             <el-col :span="10" :offset="2" v-html="slider.des" style="line-height:1.5;font-size: 2.5vh;background-color:#fef4ca;padding:5%"></el-col>
           </el-row>
@@ -304,6 +313,7 @@
           controls="controls"
           poster="images/thumbnail/liu.jpeg"
           @mouseover="playVideo('liu')"
+          @mouseout="pauseVideo('liu')"
           @ended="end2">
           <source src="http://ptmwfaugr.bkt.clouddn.com/video/liu.mp4" type="video/mp4" />
         </video>
@@ -350,6 +360,7 @@
           controls="controls"
           poster="images/thumbnail/end.jpeg"
           @mouseover="playVideo('end')"
+          @mouseout="pauseVideo('end')"
           >
           <source src="http://ptmwfaugr.bkt.clouddn.com/video/end.mp4" type="video/mp4" />
         </video>
@@ -643,8 +654,18 @@ video{
     },
     methods: {
       playVideo (key) {
-        // this.$refs[key].play()
-        console.log(key)
+        if (['jp', 'kr', 'us', 'oil'].indexOf(key) !== -1) {
+          this.$refs[key][0].play()
+        } else {
+          this.$refs[key].play()
+        }
+      },
+      pauseVideo (key) {
+        if (['jp', 'kr', 'us', 'oil'].indexOf(key) !== -1) {
+          this.$refs[key][0].pause()
+        } else {
+          this.$refs[key].pause()
+        }
       },
       handleOpen () {
         this.isActive = true

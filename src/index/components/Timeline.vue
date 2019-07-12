@@ -1,7 +1,7 @@
 <template>
   <div id="cd-timeline" class="cd-container" style="background: url('images/bg/his.png');">
 
-      <div class="cd-timeline-block" v-for="(item, index) in list.slice(0,1)" :key="'1'+index">
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(0,1)" :key="'1-'+index">
         <div class="cd-timeline-content">
           <!-- <h2>{{item.place}}</h2>
           <p>{{item.event}}</p>
@@ -20,6 +20,7 @@
             controls="controls"
             poster="images/thumbnail/first.jpg"
             @mouseover="playVideo('first')"
+            @mouseout="pauseVideo('first')"
             style="height:75%"
             >
             <source src="http://ptmwfaugr.bkt.clouddn.com/video/first.mp4" type="video/mp4" />
@@ -27,7 +28,7 @@
         </div>
       </div>
 
-      <div class="cd-timeline-block" v-for="(item, index) in list.slice(2,6)" :key="'2'+index">
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(2,6)" :key="'2-'+index">
         <div class="cd-timeline-content">
           <!-- <h2>{{item.place}}</h2>
           <p>{{item.event}}</p>
@@ -37,7 +38,7 @@
         </div>
       </div>
 
-      <div class="cd-timeline-block" v-for="(item, index) in list.slice(6,9)" :key="'2'+index">
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(6,9)" :key="'3-'+index">
         <div class="cd-timeline-content" style="height:20vh">
           <!-- <h2>{{item.place}}</h2>
           <p>{{item.event}}</p>
@@ -47,7 +48,7 @@
         </div>
       </div>
 
-      <div class="cd-timeline-block" v-for="(item, index) in list.slice(9,list.length)" :key="'2'+index">
+      <div class="cd-timeline-block" v-for="(item, index) in list.slice(9,list.length)" :key="'4-'+index">
         <div class="cd-timeline-content">
           <!-- <h2>{{item.place}}</h2>
           <p>{{item.event}}</p>
@@ -207,8 +208,10 @@ export default {
   },
   methods: {
     playVideo (key) {
-      // this.$refs[key].play()
-      console.log(key)
+      this.$refs[key].play()
+    },
+    pauseVideo (key) {
+      this.$refs[key].pause()
     }
   }
 }

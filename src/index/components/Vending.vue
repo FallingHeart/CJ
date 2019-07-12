@@ -7,7 +7,7 @@
     <img class="logo row2 col2" src="images/logo/尤拉logo.png" @click="lightbox('yl')" alt="尤拉超市">
     <img class="logo row2 col3" src="images/logo/全家logo.png" @click="lightbox('qj')" alt="全家霞公府">
     <!-- <img class="output" src="#"> -->
-    <img class="button" src="images/gotoContent.gif" @click="gotoContent()">
+    <el-button class="button" src="images/gotoContent.gif" @click="gotoContent()">点击进入</el-button>
     <!-- <div id="scene">
         <div data-depth="0.2">My first Layer!</div>
         <div data-depth="0.6">My second Layer!</div>
@@ -59,20 +59,26 @@
 } */
 .button{
   width: 20%;
-  height: 10%;
-  top: 77%;
+  height: 11%;
+  top: 76%;
   right: 12%;
+  border-radius: 20px;
+  color: white;
+  font-size: 5vh;
   position: absolute;
   animation: transbutton 0.5s infinite alternate;
 }
 @keyframes transbutton
 {
   from {
-    filter: brightness(100%);
+    background-color: black;
   }
   to {
-    filter: brightness(200%);
+    background-color: gray;
   }
+}
+.el-button:focus, .el-button:hover {
+  color: white;
 }
 </style>
 
