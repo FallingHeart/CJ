@@ -156,19 +156,19 @@
         data-1150p="left:100%;top:2%;"
         data-1250p="left:68.2%;top:3%;"
         data-1430p="left:68.2%;top:66%;"
-        style="position:absolute">
+        style="position:absolute;width:27.7%;">
       </div>
       <div><img src="images/talk/2.png" alt=""
         data-1150p="left:100%;top:2%;"
         data-1250p="left:52.3%;top:3%;"
         data-1430p="left:52.3%;top:66%;"
-        style="position:absolute">
+        style="position:absolute;width:39%;">
       </div>
       <div><img src="images/talk/3.png" alt=""
         data-1150p="right:100%;top:2%;"
         data-1250p="right:70%;top:3%;"
         data-1430p="right:70%;top:66%;"
-        style="position:absolute">
+        style="position:absolute;width:30.8%;">
       </div>
 
       <div><img src="images/talk/4.png" alt=""
@@ -224,9 +224,9 @@
       </div>
       
       <div><img src="images/talk/13.png" alt=""
-        data-1370p="left:50%;top:2%;margin-left:-1px;width:2px;"
-        data-1390p="left:50%;top:51%;;margin-left:-244px;width:488px;"
-        style="position:absolute">
+        data-1370p="left:50%;top:2%;margin-left:0%;width:0%;"
+        data-1390p="left:50%;top:51%;;margin-left:-12%;width:25.4%;"
+        style="position:absolute;">
       </div>
 
       <div><img src="images/talk/14.png" alt=""
