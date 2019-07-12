@@ -149,7 +149,7 @@ export default {
     function VerticalTimeline (element) {
       this.element = element
       this.blocks = this.element.getElementsByClassName('cd-timeline-block')
-      this.images = this.element.getElementsByClassName('cd-timeline-img')
+      // this.images = this.element.getElementsByClassName('cd-timeline-img')
       this.contents = this.element.getElementsByClassName('cd-timeline-content')
       this.offset = 0.8
       this.hideBlocks()
@@ -159,7 +159,7 @@ export default {
       for (var i = 0; i < this.blocks.length; i++) {
         (function (i) {
           if (self.blocks[i].getBoundingClientRect().top > window.innerHeight * self.offset) {
-            self.images[i].classList.add('cd-timeline-img--hidden')
+            // self.images[i].classList.add('cd-timeline-img--hidden')
             self.contents[i].classList.add('cd-timeline-content--hidden')
           }
         }
@@ -172,9 +172,9 @@ export default {
       for (var i = 0; i < this.blocks.length; i++) {
         (function (i) {
           if (self.contents[i].classList.contains('cd-timeline-content--hidden') && self.blocks[i].getBoundingClientRect().top <= window.innerHeight * self.offset) {
-            self.images[i].classList.add('cd-timeline-img--bounce-in')
+            // self.images[i].classList.add('cd-timeline-img--bounce-in')
             self.contents[i].classList.add('cd-timeline-content--bounce-in')
-            self.images[i].classList.remove('cd-timeline-img--hidden')
+            // self.images[i].classList.remove('cd-timeline-img--hidden')
             self.contents[i].classList.remove('cd-timeline-content--hidden')
           }
         }
@@ -377,7 +377,7 @@ Main components
 
 .cd-timeline-content {
     height: 36vh;
-    overflow: hidden;
+    /* overflow: hidden; */
   position: relative;
   margin-left: 60px;
   background: white;
