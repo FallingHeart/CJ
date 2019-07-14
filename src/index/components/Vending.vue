@@ -74,7 +74,7 @@
     background-color: black;
   }
   to {
-    background-color: gray;
+    background-color: #4f5257;
   }
 }
 .el-button:focus, .el-button:hover {

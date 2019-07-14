@@ -61,7 +61,7 @@
     "build": "echo \"Error: no build specified\" && exit 1",
     "dev:index": "webpack-dev-server --open --config build/webpack.index.dev.js",
     "pro:index": "webpack --config build/webpack.index.prod.js",
-    "start": "node server.js",
+    "start": "node client.js",
     "dev": "webpack src/main.js dist/main.js",
     "aindex": "NODE_ENV=production npm_config_report=true npm run bindex"
   },
