@@ -11,7 +11,7 @@ html css js skrollr vue element-ui node pm2 nginx
 1. 网站整体使用 vue 框架
 2. 贩卖机、导航和轮播图使用 element-ui
 3. 所有视差滚动部分均使用 skrollr
-4. 视频播放与暂停使用 HTML5 原生接口，并在vue中调用
+4. 视频播放与暂停使用 HTML5 原生接口，并在 vue 中调用
 5. 时间轴使用了一个开源库，并对其进行了修改
 
 ### 打开终端
