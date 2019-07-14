@@ -286,27 +286,27 @@
       :key="index"
       v-html="article.content">
       </div> -->
-      <div class="des" style="background:url('images/difficulty/1.png') 0 0 / contain no-repeat;width:50%;height:10%;left:7.5%;" data-1600p="top:2%" data-1650p="top:0%"></div>
-      <div class="des" style="background:url('images/difficulty/2.png') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1650p="top:8%" data-1700p="top:2%"></div>
-      <div class="des" style="background:url('images/difficulty/3.png') 0 0 / contain no-repeat;width:50%;height:15%;left:7.5%;" data-1650p="top:15%" data-1750p="top:10%"></div>
-      <div class="des" style="background:url('images/difficulty/4.png') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1700p="top:22%" data-1750p="top:15%"></div>
-      <div class="des" style="background:url('images/difficulty/5.png') 0 0 / contain no-repeat;width:50%;height:25%;left:7.5%;" data-1750p="top:25%" data-1850p="top:20%"></div>
-      <div class="des" style="background:url('images/difficulty/6.png') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1750p="top:45%" data-1900p="top:25%"></div>
-      <div class="des" style="background:url('images/difficulty/7.jpg') 0 0 / contain no-repeat;width:50%;height:15%;left:7.5%;" data-1850p="top:45%" data-1950p="top:20%"></div>
-      <div class="des" style="background:url('images/difficulty/8.jpg') 0 0 / contain no-repeat;width:50%;height:15%;left:46.4%;" data-1870p="top:48%" data-1950p="top:25%"></div>
-      <div class="des" style="background:url('images/difficulty/9.jpg') 0 0 / contain no-repeat;width:50%;height:25%;left:7.5%;" data-1950p="top:50%" data-2050p="top:20%"></div>
-      <div id="intro" style="height:10%;width:100%;">
+      <div class="des" style="background:url('images/difficulty/1.png') 0 0 / contain no-repeat;width:50%;height:8.3%;left:7.5%;" data-1600p="top:2%" data-1650p="top:0%"></div>
+      <div class="des" style="background:url('images/difficulty/2.png') 0 0 / contain no-repeat;width:50%;height:12.5%;left:46.4%;" data-1650p="top:8%" data-1700p="top:2%"></div>
+      <div class="des" style="background:url('images/difficulty/3.png') 0 0 / contain no-repeat;width:50%;height:12.5%;left:7.5%;" data-1650p="top:15%" data-1750p="top:10%"></div>
+      <div class="des" style="background:url('images/difficulty/4.png') 0 0 / contain no-repeat;width:50%;height:12.5%;left:46.4%;" data-1700p="top:22%" data-1750p="top:15%"></div>
+      <div class="des" style="background:url('images/difficulty/5.png') 0 0 / contain no-repeat;width:50%;height:20.8%;left:7.5%;" data-1750p="top:25%" data-1850p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/6.png') 0 0 / contain no-repeat;width:50%;height:12.5%;left:46.4%;" data-1750p="top:45%" data-1900p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/7.jpg') 0 0 / contain no-repeat;width:50%;height:12.5%;left:7.5%;" data-1850p="top:45%" data-1950p="top:20%"></div>
+      <div class="des" style="background:url('images/difficulty/8.jpg') 0 0 / contain no-repeat;width:50%;height:12.5%;left:46.4%;" data-1870p="top:52%" data-1950p="top:25%"></div>
+      <div class="des" style="background:url('images/difficulty/9.jpg') 0 0 / contain no-repeat;width:50%;height:24%;left:7.5%;" data-1900p="top:54%" data-2050p="top:20%"></div>
+      <!-- <div id="intro" style="height:10%;width:100%;">
         <img        
           style="height:18%;width:100%;top: 60%;position: absolute;"
           data-1980p="transform[bounce]:scale(1,1);opacity:0"
           data-2020p="transform[bounce]:scale(1,1);opacity:1"
           src="images/difficulty/view.png">
-      </div>
+      </div> -->
     </div>
 
     <div class="section sequence" style="background:url(images/bg/dif.png);background-size:100% 100%;height: 100%;width:100%">
-      <div class="des des-left" style="right:5%;top:0%;">
-        <p><span style="font-size:2.5em">六月中旬</span>，王宁离开这家自己工作了一年便利店回老家河南工作。</p>
+      <div class="des des-left" style="right:23%;top:0%;">
+        <p><span style="font-size:2.5vh">六月中旬，王宁离开这家自己工作了一年便利店回老家河南工作。</span></p>
         <p>在他走前，我们问他，回老家后打算做什么？</p>
         <p>“做农业吧。”王宁低着头，说话的时候习惯性地不看人，只是偶尔抬眼以示尊重。</p>
         <p>农业比便利店更挣钱吗？</p>
@@ -335,10 +335,10 @@
         </video>
       </div>
       </transition>
-      <div id="liu" data-2230p="left:22%;top:0%;width: 50%;" data-2300p="left:5%;top:50%;width: 50%;">
+      <div id="liu" data-2130p="left:22%;top:0%;width: 50%;" data-2200p="left:5%;top:50%;width: 50%;">
         <img src="images/opinion/talk.png" style="width: 100%;">
       </div>
-      <div class="des des-liu" data-2230p="right:-50%;top:65%;" data-2300p="right:3%;top:50%;">
+      <div class="des des-liu" data-2130p="right:-50%;top:65%;" data-2200p="right:3%;top:50%;">
         <el-carousel :interval="5000" arrow="always">
           <el-carousel-item v-for="(dif,index) in difficulties" v-bind:key="index" v-html="dif.content">
            
@@ -355,7 +355,7 @@
     </div>
     
     <div class="section post" style="background:url(images/bg/hope.jpeg);">
-      <div class="des des-post" data-2930p="right:5%;top:50%;" data-3000p=right:5%;top:0%;>
+      <div class="des des-post" data-2830p="right:5%;top:50%;" data-2900p=right:5%;top:0%;>
         <p><span style="font-size:5vh">人来人去，车来车往。</span>在无数个十字路口、街道、商厦，一家家便利店在晨曦中迎来客人，在日暮里见证奋斗的身影。王宁走了，刘店长来了，在不断的交替更迭中，我们始终相信，便利店会越来越好.......</p>
       </div>
     </div>    
@@ -522,11 +522,11 @@ video{
   font-size: 28px;
 }
 .des-left{
-  width: 80%;
+  width: 52%;
   height: 80%;
-  margin: 0;
-  padding: 0 5%;
-  font-size: 2.5vh;
+  margin: 0 auto;
+  padding: 1%;
+  font-size: 2.3vh;
 }
 .des-liu{
   width: 40%;
@@ -551,7 +551,7 @@ video{
   height: 300%;
 }
 .future{
-  height: 600%;
+  height: 500%;
   margin-bottom: -75%;
 }
 .post{
