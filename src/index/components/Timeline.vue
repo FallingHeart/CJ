@@ -23,7 +23,7 @@
             @mouseout="pauseVideo('first')"
             style="height:75%"
             >
-            <source src="http://qiniu.dat-day.com/video/first.mp4" type="video/mp4" />
+            <source src="http://qiniu.bamo.tech/video/first.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
