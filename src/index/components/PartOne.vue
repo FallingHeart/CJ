@@ -44,7 +44,7 @@
           @mouseover="playVideo('open')"
           @mouseout="pauseVideo('open')"
           @ended="end">
-          <source src="http://qiniu.dat-day.com/video/opening.mp4" type="video/mp4" />
+          <source src="http://qiniu.bamo.tech/video/opening.mp4" type="video/mp4" />
         </video>
       </div>
       </transition>
@@ -77,7 +77,7 @@
           @mouseover="playVideo('intro')"
           @mouseout="pauseVideo('intro')"
           >
-          <source src="http://qiniu.dat-day.com/video/intro.mp4" type="video/mp4" />
+          <source src="http://qiniu.bamo.tech/video/intro.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -101,7 +101,7 @@
           @mouseover="playVideo('scan')"
           @mouseout="pauseVideo('scan')"
           >
-          <source src="http://qiniu.dat-day.com/video/scan.mp4" type="video/mp4" />
+          <source src="http://qiniu.bamo.tech/video/scan.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -120,7 +120,7 @@
           @mouseover="playVideo('purchase')"
           @mouseout="pauseVideo('purchase')"
           >
-          <source src="http://qiniu.dat-day.com/video/purchase.mp4" type="video/mp4" />
+          <source src="http://qiniu.bamo.tech/video/purchase.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -331,7 +331,7 @@
           @mouseover="playVideo('liu')"
           @mouseout="pauseVideo('liu')"
           @ended="end2">
-          <source src="http://qiniu.dat-day.com/video/liu.mp4" type="video/mp4" />
+          <source src="http://qiniu.bamo.tech/video/liu.mp4" type="video/mp4" />
         </video>
       </div>
       </transition>
@@ -369,7 +369,7 @@
           @mouseover="playVideo('end')"
           @mouseout="pauseVideo('end')"
           >
-          <source src="http://qiniu.dat-day.com/video/end.mp4" type="video/mp4" />
+          <source src="http://qiniu.bamo.tech/video/end.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -582,25 +582,25 @@ video{
         sliderList: [
           {
             des: '<p>日本便利店：日本便利店是熟悉的驿站。“站读文化”是日本便利店特有的一道风景线。不让客人等待也是日本便利店服务的一大原则。一旦客人排队，其他店员会立即跑到其他的收银台，一边向客人致歉，一边给客人结帐并提供一站式驿站服务。无论何时何地，日本便利店都是行业的标杆。</p>',
-            video: 'http://qiniu.dat-day.com/video/slider/jp.mp4',
+            video: 'http://qiniu.bamo.tech/video/slider/jp.mp4',
             poster: 'images/slider/jp.jpg',
             ref: 'jp'
           },
           {
             des: '<p>便利店最早起源于美国。但由于面积大，人口少，便利店对美国人而言意义不大，分散的居住点使得大型的shopping mall才是美国特色，美国人把购物当作一种任务，每周定期去大型超市进行采购。此外，激烈的竞争和极低的利润导致便利店在美国普遍不多。所以，美国便利店多开在加油站中，白领通常会在通勤途中进入加油站，并非为了加油，而是为了去便利店购物。</p>',
-            video: 'http://qiniu.dat-day.com/video/slider/us.mp4',
+            video: 'http://qiniu.bamo.tech/video/slider/us.mp4',
             poster: 'images/slider/us.jpg',
             ref: 'us'
           },
           {
             des: '<p>美国加油站便利店：在美国，加油站等于服务站，由于政府法律规定营业场所及工作场所必须与个人居住地严格分开，生活居住区不准有商店营业，在中国随处可见的食杂店、便利店在美国的居住区中难觅其踪。所以，购物对美国人而言便成了一项专门任务，而非休闲活动。这时，上下班途中或生活区附近那些24小时营业的加油站里的便利店便填补了这个空缺。有些人去服务站并不是为了加油，而是为了到里面的便利店购物。</p>',
-            video: 'http://qiniu.dat-day.com/video/slider/oil.mp4',
+            video: 'http://qiniu.bamo.tech/video/slider/oil.mp4',
             poster: 'images/slider/oil.jpg',
             ref: 'oil'
           },
           {
             des: '<p>韩国便利店：在韩国，便利店和咖啡店一样随处可见。无论是上班族的午餐，还是游客喜爱的特色小食都可以在这里找到。便利店更是众多浪漫韩剧必备的拍摄地点，男女主人公在便利店门口的小桌上分享着一杯热乎乎的拉面看着都如此美好。“除了没有的都有了”，韩国人这么形容便利店。韩国多家便利店品牌还多推出了快递配送服务。顾客可凭条形码到便利店取货或由便利店职员送货上门。此外，韩国还有提供洗涤服务的便利店。</p>',
-            video: 'http://qiniu.dat-day.com/video/slider/kr.mp4',
+            video: 'http://qiniu.bamo.tech/video/slider/kr.mp4',
             poster: 'images/slider/kr.jpg',
             ref: 'kr'
           }
